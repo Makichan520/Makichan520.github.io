@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Darjee&#39;s Blog</title>
+    <link>https://makichan520.github.io/post/</link>
+    <description>Recent content in Posts on Darjee&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate><atom:link href="https://makichan520.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>https://makichan520.github.io/post/test/</link>
+      <pubDate>Sun, 04 Apr 2021 01:29:42 +0900</pubDate>
+      
+      <guid>https://makichan520.github.io/post/test/</guid>
+      <description>从零开始学习Markdown 要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？) ·标题
+1.使用#号＋空格来表示标题(Header)，#的数量代表标题级数&amp;lt;和html类似&amp;gt;。</description>
+    </item>
+    
+  </channel>
+</rss>

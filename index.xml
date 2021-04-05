@@ -1,0 +1,29 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Darjee&#39;s Blog</title>
+    <link>https://makichan520.github.io/</link>
+    <description>Recent content on Darjee&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate>
+    
+        <atom:link href="https://makichan520.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>test</title>
+        <link>https://makichan520.github.io/post/test/</link>
+        <pubDate>Sun, 04 Apr 2021 01:29:42 +0900</pubDate>
+        
+        <guid>https://makichan520.github.io/post/test/</guid>
+        <description>Darjee&#39;s Blog https://makichan520.github.io/post/test/ -&lt;h1 id=&#34;从零开始学习markdown&#34;&gt;从零开始学习Markdown&lt;/h1&gt;
+&lt;h3 id=&#34;要说原因的话只是写git项目总要写写readme文档听说这个写作也很方便以后写作也用这个挺好还没感受到有什么地方很方便为啥我不用word&#34;&gt;要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？)&lt;/h3&gt;
+&lt;p&gt;·标题&lt;/p&gt;
+&lt;p&gt;1.使用#号＋空格来表示标题(Header)，#的数量代表标题级数&amp;lt;和html类似&amp;gt;。&lt;/p&gt;
+- https://makichan520.github.io/post/test/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 
