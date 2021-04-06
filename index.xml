@@ -1,23 +1,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Darjee&#39;s Blog</title>
-    <link>https://Makichan520.github.io/</link>
+    <link>https://makichan520.github.io/</link>
     <description>Recent content on Darjee&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate>
     
-        <atom:link href="https://Makichan520.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://makichan520.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>学习Markdown语法</title>
-        <link>https://Makichan520.github.io/post/markdown/</link>
+        <link>https://makichan520.github.io/post/markdown/</link>
         <pubDate>Sun, 04 Apr 2021 01:29:42 +0900</pubDate>
         
-        <guid>https://Makichan520.github.io/post/markdown/</guid>
-        <description>Darjee&#39;s Blog https://Makichan520.github.io/post/markdown/ -&lt;h2 id=&#34;从零开始学习markdown&#34;&gt;从零开始学习Markdown&lt;/h2&gt;
+        <guid>https://makichan520.github.io/post/markdown/</guid>
+        <description>Darjee&#39;s Blog https://makichan520.github.io/post/markdown/ -&lt;h2 id=&#34;从零开始学习markdown&#34;&gt;从零开始学习Markdown&lt;/h2&gt;
 &lt;h4 id=&#34;要说原因的话只是写git项目总要写写readme文档听说这个写作也很方便以后写作也用这个挺好还没感受到有什么地方很方便为啥我不用word&#34;&gt;要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？)&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;为了各位看官老爷的良好体验，建议直接观看代码块部分&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;标题&#34;&gt;标题&lt;/h4&gt;
@@ -139,7 +139,7 @@ _   下划线
 .   句点
 !   感叹号
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;后续可能会补充吧毕竟学习使用中用多少写多少&#34;&gt;后续可能会补充吧，毕竟学习使用中，用多少写多少&lt;/h3&gt;
-- https://Makichan520.github.io/post/markdown/ - </description>
+- https://makichan520.github.io/post/markdown/ - </description>
         </item>
     
     
