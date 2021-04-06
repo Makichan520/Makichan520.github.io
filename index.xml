@@ -1,27 +1,145 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Darjee&#39;s Blog</title>
-    <link>https://makichan520.github.io/</link>
+    <link>https://Makichan520.github.io/</link>
     <description>Recent content on Darjee&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate>
     
-        <atom:link href="https://makichan520.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://Makichan520.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>test</title>
-        <link>https://makichan520.github.io/post/test/</link>
+        <title>学习Markdown语法</title>
+        <link>https://Makichan520.github.io/post/markdown/</link>
         <pubDate>Sun, 04 Apr 2021 01:29:42 +0900</pubDate>
         
-        <guid>https://makichan520.github.io/post/test/</guid>
-        <description>Darjee&#39;s Blog https://makichan520.github.io/post/test/ -&lt;h1 id=&#34;从零开始学习markdown&#34;&gt;从零开始学习Markdown&lt;/h1&gt;
-&lt;h3 id=&#34;要说原因的话只是写git项目总要写写readme文档听说这个写作也很方便以后写作也用这个挺好还没感受到有什么地方很方便为啥我不用word&#34;&gt;要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？)&lt;/h3&gt;
-&lt;p&gt;·标题&lt;/p&gt;
-&lt;p&gt;1.使用#号＋空格来表示标题(Header)，#的数量代表标题级数&amp;lt;和html类似&amp;gt;。&lt;/p&gt;
-- https://makichan520.github.io/post/test/ - </description>
+        <guid>https://Makichan520.github.io/post/markdown/</guid>
+        <description>Darjee&#39;s Blog https://Makichan520.github.io/post/markdown/ -&lt;h2 id=&#34;从零开始学习markdown&#34;&gt;从零开始学习Markdown&lt;/h2&gt;
+&lt;h4 id=&#34;要说原因的话只是写git项目总要写写readme文档听说这个写作也很方便以后写作也用这个挺好还没感受到有什么地方很方便为啥我不用word&#34;&gt;要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？)&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;为了各位看官老爷的良好体验，建议直接观看代码块部分&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;标题&#34;&gt;标题&lt;/h4&gt;
+&lt;p&gt;1.使用#号＋空格来表示标题(Header)，#的数量代表标题级数&amp;lt;和html类似&amp;gt;。
+标准md格式下有h1~h6六种大小的标题，其中一级标题最大。&lt;/p&gt;
+&lt;p&gt;2.另一种的方式是使用两种下划线 === 和 &amp;mdash; 来进行文字大小的控制，值得一提的是该方式只能标识一级标题与二级标题：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;h1(一级标题)
+===
+h2（二级标题）
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3.显而易见的是，仅使用标题来控制文字大小和格式并不全面，所谓六种标题的大小也无法涵盖咱们的多数需求。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;字体与标识&#34;&gt;字体与标识&lt;/h4&gt;
+&lt;p&gt;· 很可惜，这里说的字体不是你想象中的 微软雅黑，黑体宋体 这种字体，而是加粗，斜体这类偏向于特殊效果的附加字体，&lt;em&gt;斜体&lt;/em&gt; 我们使用两个&lt;code&gt;* *&lt;/code&gt; ，将需要加斜的文字内容包含其中。&lt;/p&gt;
+&lt;p&gt;·类似于斜体，&lt;strong&gt;加粗&lt;/strong&gt;则是使用&lt;code&gt;** **&lt;/code&gt; ，把加粗内容放入第二个点之后。&lt;/p&gt;
+&lt;p&gt;·另外，md还包含了常用的下划线标记和删除线标记。 &lt;del&gt;删除线&lt;/del&gt; 使用&lt;code&gt;~~ ~~&lt;/code&gt;来将特定内容打上删除线。&lt;/p&gt;
+&lt;p&gt;·同理 ++下划线++ 使用&lt;code&gt;++ ++&lt;/code&gt;来标记下划线内容。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*斜体内容*
+**加粗内容**
+~~删除线内容~~
+++下划线内容++
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;由于标题会自动加粗，因此加粗对标题不起作用，也不会取消标题的加粗&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;段落&#34;&gt;段落&lt;/h4&gt;
+&lt;p&gt;md格式下的分段十分简易，前后至少留一个空行即可，中间多余的空行则会被忽略。
+当仅仅是分行不空行时，md显示出的内容并不会另起一行 而是继续从以上内容开始，直到该行被占满。&lt;/p&gt;
+&lt;h4 id=&#34;引用标记&#34;&gt;引用标记&lt;/h4&gt;
+&lt;p&gt;当需要高亮标注某段内容，使用&lt;code&gt;== ==&lt;/code&gt;来标记段落&lt;/p&gt;
+&lt;p&gt;若希望标记该段属于引用内容，使用&lt;code&gt;&amp;gt;&lt;/code&gt;来标记段落。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;== 高亮部分 == 
+&amp;gt;引用内容
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;==我是高亮内容，需要亮度调低一点吗？==&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;该段落属于引用内容，当再次分段时，标记效果结束&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;链接与图片&#34;&gt;链接与图片&lt;/h4&gt;
+&lt;p&gt;&lt;del&gt;如果你受够了同标记语言家族里HTML的穷追猛打，那你一定会感激md大哥对你的宽恕。&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;Markdown格式下的链接插入：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[链接标题](链接URL)&lt;/code&gt;
+——&amp;gt;  &lt;a href=&#34;https://shinycolors.enza.fun/&#34;&gt;偶像的战斗，不是杀就是被杀&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;图片插入：
+&lt;code&gt;![图片名](图片URL或本地路径)&lt;/code&gt;
+&lt;img src=&#34;https://img.moegirl.org.cn/common/c/c0/S11_juri_SSR04.jpg&#34; alt=&#34;space what?&#34;&gt;
+(好看吗，快来入坑闪耀色彩吧)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;列表&#34;&gt;列表&lt;/h4&gt;
+&lt;p&gt;md下的列表与其说是表不如说是一种段落标识，类似在每个段头打上序号或者标点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无序列表： 使用 &lt;code&gt;- &lt;/code&gt; &lt;code&gt;+ &lt;/code&gt; 或 &lt;code&gt;* &lt;/code&gt; (带空格) 来标记段落，插入在行头。&lt;/li&gt;
+&lt;li&gt;之后的每次换行则会自动为你打上列表头，直到手动删去。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;有序列表：在行头输入 &lt;code&gt;序号. &lt;/code&gt; (带空格)即可构造有序列表。&lt;/li&gt;
+&lt;li&gt;和无序列表相似，会在换行时自动生成下个序号直至手动删除。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;##注意，如果行头标记没有带空格，则不会形成列表，而是仅仅当做行内文字来处理，md处理列表时，会自动进行相关缩进，而文字内容则不会。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当在列表中某一段写入多行内容时，要注意首行以外内容的缩进，缩进4个空格为最佳。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; · 列表内段落1
+     &amp;gt;引用内容
+     小段2
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h4 id=&#34;分割线&#34;&gt;分割线&lt;/h4&gt;
+&lt;p&gt;Markdown下使用分割线很简单，使用 &lt;code&gt;---&lt;/code&gt; 或 &lt;code&gt;***&lt;/code&gt;皆可。&lt;/p&gt;
+&lt;p&gt;(分割可能是最受欢迎的排版元素之一了)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;--- 我是分割线
+*** 我也是 
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h4 id=&#34;代码块&#34;&gt;代码块&lt;/h4&gt;
+&lt;p&gt;好！很有精神！ Markdown在Info圈广受好评的功能，插入代码块，简单易懂。
+使用反引号 ` code ` 来标识小块代码（行内代码），使用三个反引号来标识进入代码块和离开代码块。&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
+&lt;p&gt;我是大块代码内容&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
+&lt;p&gt;` 我是小块代码 `&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;表格&#34;&gt;表格&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;header 1&lt;/th&gt;
+&lt;th&gt;header 2&lt;/th&gt;
+&lt;th&gt;header 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;row 1 col 1&lt;/td&gt;
+&lt;td&gt;row 1 col 2&lt;/td&gt;
+&lt;td&gt;row 1 col 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;row 2 col 1&lt;/td&gt;
+&lt;td&gt;row 2 col 2&lt;/td&gt;
+&lt;td&gt;row 2 col 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;表头1 | 表头2 | 表头3（后续还可以加）
+--- | --- | ---
+行1列1 | 行1列2 | 行1列3 ...
+行2列1 | 行2列2 | 行2列3 ...
+(后略)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;##注：可以在&amp;mdash;左右打冒号：来表示表格内文字的对齐方式，左冒号代表相左对齐，右冒号则是向右，无冒号或两边冒号则是居中显示&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;其他符号&#34;&gt;其他符号&lt;/h4&gt;
+&lt;p&gt;一言以蔽之 转义字符，用一个反斜杠加以下符号能直接在文本中显示符号，而不是调用格式或标识。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\   反斜杠
+`   反引号
+*   星号
+_   下划线
+{}  大括号
+[]  中括号
+()  括弧
+#   井号
++   加号
+-   减号
+.   句点
+!   感叹号
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;后续可能会补充吧毕竟学习使用中用多少写多少&#34;&gt;后续可能会补充吧，毕竟学习使用中，用多少写多少&lt;/h3&gt;
+- https://Makichan520.github.io/post/markdown/ - </description>
         </item>
     
     
