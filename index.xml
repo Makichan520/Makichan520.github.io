@@ -18,8 +18,8 @@
         
         <guid>https://makichan520.github.io/post/markdown/</guid>
         <description>Darjee&#39;s Blog https://makichan520.github.io/post/markdown/ -&lt;h2 id=&#34;从零开始学习markdown&#34;&gt;从零开始学习Markdown&lt;/h2&gt;
-&lt;h4 id=&#34;要说原因的话只是写git项目总要写写readme文档听说这个写作也很方便以后写作也用这个挺好还没感受到有什么地方很方便为啥我不用word&#34;&gt;要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？)&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;为了各位看官老爷的良好体验，建议直接观看代码块部分&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？) &lt;!-- raw HTML omitted --&gt;
+&lt;strong&gt;为了各位看官老爷的良好体验，建议直接观看代码块部分&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;标题&#34;&gt;标题&lt;/h4&gt;
 &lt;p&gt;1.使用#号＋空格来表示标题(Header)，#的数量代表标题级数&amp;lt;和html类似&amp;gt;。
 标准md格式下有h1~h6六种大小的标题，其中一级标题最大。&lt;/p&gt;
@@ -61,7 +61,7 @@ h2（二级标题）
 ——&amp;gt;  &lt;a href=&#34;https://shinycolors.enza.fun/&#34;&gt;偶像的战斗，不是杀就是被杀&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;图片插入：
 &lt;code&gt;![图片名](图片URL或本地路径)&lt;/code&gt;
-&lt;img src=&#34;https://img.moegirl.org.cn/common/c/c0/S11_juri_SSR04.jpg&#34; alt=&#34;space what?&#34;&gt;
+&lt;img src=&#34;https://gitee.com/Makichan520/pics/raw/master/Picgo+Gitee%E5%9B%BE%E5%BA%8A/S10_chiyoko_SSR05.jpg&#34; alt=&#34;乐队巧可&#34;&gt;
 (好看吗，快来入坑闪耀色彩吧)&lt;/p&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;列表&#34;&gt;列表&lt;/h4&gt;
@@ -138,6 +138,19 @@ _   下划线
 -   减号
 .   句点
 !   感叹号
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h4 id=&#34;字体颜色&#34;&gt;字体颜色&lt;/h4&gt;
+&lt;p&gt;坏消息是，MarkDown由于是一种为写作而生的轻量级标记语言，并没有配备字体/字号/字色的设置功能。好消息是，Markdown支持多数内嵌HTML语言，也就是说，在支持的显示主题中(我这个theme好像不支持，所以我直接截图了编辑器上的显示内容)，通过HTML标签的内嵌，我们可以实现一些MD原本没有而HTML可支持的功能，其中常用的一种就是字体的各种设置。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/Makichan520/pics/raw/master/Picgo+Gitee%E5%9B%BE%E5%BA%8A/image-20210409174006440.png&#34; alt=&#34;image-20210409174006440&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;font face=&amp;quot;黑体&amp;quot;&amp;gt; 黑体字体内容 &amp;lt;/font&amp;gt;
+
+&amp;lt;font fase=&amp;quot;宋体&amp;quot;&amp;gt; 宋体字体内容 &amp;lt;/font&amp;gt;
+
+&amp;lt;font color=&amp;quot;red&amp;quot; &amp;gt; 红色字体内容 &amp;lt;/font&amp;gt;
+
+&amp;lt;font size=4&amp;gt;字号为4的内容&amp;lt;/font&amp;gt;
+
+&amp;lt;font color=green face=&amp;quot;微软雅黑&amp;quot; size=6&amp;gt;绿色 微软雅黑 字号6  &amp;lt;/font&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;后续可能会补充吧毕竟学习使用中用多少写多少&#34;&gt;后续可能会补充吧，毕竟学习使用中，用多少写多少&lt;/h3&gt;
 - https://makichan520.github.io/post/markdown/ - </description>
         </item>
