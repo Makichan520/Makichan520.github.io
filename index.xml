@@ -1,23 +1,89 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Darjee&#39;s Blog</title>
-    <link>https://makichan520.github.io/</link>
+    <link>http://makichan520.github.io/</link>
     <description>Recent content on Darjee&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate>
     
-        <atom:link href="https://makichan520.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://makichan520.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Unity RGB D数据集生成指北</title>
+        <link>http://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/</link>
+        <pubDate>Fri, 24 Jun 2022 16:27:03 +0200</pubDate>
+        
+        <guid>http://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/</guid>
+        <description>Darjee&#39;s Blog http://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/ -&lt;h1 id=&#34;unity基于perception包创建rgbd数据集毕设拾遗&#34;&gt;Unity基于Perception包创建RGBD数据集——毕设拾遗&lt;/h1&gt;
+&lt;h3 id=&#34;-前言&#34;&gt;· 前言&lt;/h3&gt;
+&lt;p&gt;​	历经假期2个月，终于找到了缺人而且愿意招本科生的本校毕设题目（说是毕设其实是毕业论文）。给老板干活闲暇之余以此博客记录一下毕设始末以及踩的各种坑。&lt;/p&gt;
+&lt;p&gt;​	毕设题目是使用Unity来生成RGBD图片以及数据，该数据集会用于实验室里机械臂的深度学习项目中。因为生成数据涉及Unity、C#、计算机视觉(摄像机原理)等知识，而这其中我没有一项是会的，所以是边学边做的状态下进行的毕设，看官们大概都比我强不少，不过至少可以作为Unity的Perception包指南来略作参考，我也会通过一个完全初学者的视角来展示开发过程。&lt;/p&gt;
+&lt;p&gt;​	Perception包可以生成用于计算机视觉相关训练和验证的大型数据集，该包基于C#实现，在Unity上运行。具有自定义随机场景，调整相机设置，生成图片以及相关数据等功能，可以提供符合机器学习任务要求的数据集。&lt;/p&gt;
+&lt;h3 id=&#34;-事前准备&#34;&gt;· 事前准备&lt;/h3&gt;
+&lt;p&gt;​	Unity 安装&lt;/p&gt;
+&lt;p&gt;​	C#开发环境配置（以及和Unity的绑定设置）&lt;/p&gt;
+&lt;p&gt;​	创建URP或HDRP项目，在项目中导入Perception包&lt;/p&gt;
+&lt;p&gt;​	&lt;a href=&#34;https://github.com/Unity-Technologies/com.unity.perception&#34;&gt;【Github项目地址】&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在Unity界面中，&lt;strong&gt;Window -&amp;gt; Package Manager&lt;/strong&gt; 调出拓展包管理窗口，点击&lt;strong&gt;Add package from git URL&lt;/strong&gt;并输入 &lt;strong&gt;com.unity.perception&lt;/strong&gt; 即可。也可以通过输入特定版本的URL来安装特定版本的拓展包。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-使用范例&#34;&gt;· 使用范例&lt;/h3&gt;
+&lt;p&gt;​	有英文基础的可以直接查看Perception包的github页面，上面有基本的教程范例。本节我会以其为基础来展示创建简单数据集的步骤范例。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建Scene&lt;/p&gt;
+&lt;p&gt;在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要随机化的GameObject也需要你先放入Scene中(例如Direction Light)，当然也可以在之后设置Randomizer时再行设置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置Perception Camera&lt;/p&gt;
+&lt;p&gt;新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关数据。&lt;/p&gt;
+&lt;p&gt;​	&lt;code&gt;Description即该摄像机的概述，一般为摄像机名&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	&lt;code&gt;Show Labeler Visualization 勾选后会在UI界面实时显示Labeler标识的信息&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	&lt;code&gt;Save Camera Rgb output to 勾选后会将捕获的图片以文件输出到磁盘中(路径为下面的Lastet Output Folder)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	&lt;code&gt;Capture Trigger Mode 为摄像机捕获模式的设定，Schedule会让相机周期性地捕获图片，Manual则需要在其他脚本内写入RequestCapture()函数来手动捕获图片&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	&lt;code&gt;Camera Labelers列表用于配置摄像机的数据生成，可以使用Perception包自带的Labeler或者自己按需求实现Labeler&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	Camera Labeler通常会依据Labeler Config进行对象检测与标记，并依据捕获时的状态生成相关数据。&lt;/p&gt;
+&lt;p&gt;​                      &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;如图， BoundingBox2DLabeler会识别物体并且根据边界来为每一个对象绘制一个矩形边界，ObjectCountLabeler会计算每种物体在捕获画面中的数量，SemanticSegmentationLabeler会在视图的顶部显示叠加的Semantic分割图像，RenderedObjectInfoLabeler会生成保存渲染对象信息的json文件。而这些标签器的运行都依赖于Label Config。&lt;/p&gt;
+&lt;p&gt;可以在Asset中新建ID Label Config(用于指定标签对应ID) 和 SemanticSegmentation Label Config(用于指定标签对应颜色)。再给想要标记的物体添加Labeling组件，添加上对应的ID即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/Makichan520/pics/raw/master/Picgo+Gitee%E5%9B%BE%E5%BA%8A/image-20211209220906172.png&#34; alt=&#34;image-20211209220906172&#34;&gt;&lt;img src=&#34;https://s2.loli.net/2022/06/24/7uh1nXa8TFbZI6j.png&#34; alt=&#34;image-20211209220937407&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在此可以通过添加文件夹或勾选Use Automatic Labeling来快速设置ID Label Config。(个人推荐一个个慢慢设置，同类型的物体都应该设置成一个标签)&lt;/p&gt;
+&lt;p&gt;并且，同一个GameObject可以拥有复数标签，这也贴合我们对数据生成的要求。&lt;/p&gt;
+&lt;p&gt;3.配置Depth Camera&lt;/p&gt;
+&lt;p&gt;为了生成RGBD图片，我们需要一个深度摄像机来捕获深度图片，Perception包内并未提供深度摄像机，于是我们自己实现了一个用于生成深度图的脚本。这个脚本的代码参考了Perception camera本身(因为需要和这个摄像机同步捕获图片，以生成RGBD图像)。&lt;/p&gt;
+&lt;p&gt;建议将Depth Camera和Perception Camera总是设为同一位置(可以设置为子对象，或将两个组件绑定在同一Camera对象上)，Depth Camera 参数设置如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/Makichan520/pics/raw/master/Picgo+Gitee%E5%9B%BE%E5%BA%8A/QQ%E5%9B%BE%E7%89%8720211211172002.png&#34; alt=&#34;image-20211211171827530&#34;&gt;&lt;/p&gt;
+&lt;p&gt;和perception camera类似，可以调整捕获模式(自动/手动)，仅在自动模式下，捕获间隔会启用，并且每隔一定秒自动捕获深度图。Camera选择需要作为深度摄像机的Camera，图片格式我选择的是Exr（方便使用Python脚本和RGB图合并），深度格式选择的是R32G32B32A32_S Float (也可以选择符合你需求的格式)。&lt;/p&gt;
+&lt;p&gt;同理，当使用Manual模式进行捕获时，需要手动调用DepthCamera.RequestCapture()来进行捕获。&lt;/p&gt;
+&lt;p&gt;4.配置随机化&lt;/p&gt;
+&lt;p&gt;正如前文所述，我们需要设置场景的随机化，以便生成符合要求的数据集。有关这个任务的主要模块是Scenario和Randomizer。&lt;/p&gt;
+&lt;p&gt;我们先在Scene中右键添加一个新游戏对象 &lt;code&gt;Create Empty&lt;/code&gt;, 命名为 Scenario， 在对象中添加组件Perception -&amp;gt; Scenarios -&amp;gt;Fixed Length Scenario, 这是perception包自带的定长方案，该Scenario会让场景进行固定数量的随机化，并且可以调整每次随机化之间的间隔(帧)。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/Makichan520/pics/raw/master/Picgo+Gitee%E5%9B%BE%E5%BA%8A/image-20211211143702452.png&#34; alt=&#34;image-20211211143702452&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如图，该Scenario总共进行20次随机化，每次间隔300帧，执行迭代的Unity模拟线程的数目为1，(线程)索引从0开始。&amp;lt;关于Instance的说明我并没有测试，按照说明是指Unity worker instance的数目和索引&amp;gt;&lt;/p&gt;
+&lt;p&gt;之后就可以开始添加随机器了。所谓随机器，就是会在Scenario每一次迭代中对相应目标进行随机化的组件，perception包已经实现了不少随机器，我们先以Background Object Placement Randomizer 和 Sun Angle Randomizer 为例，大致展现一下运行模式。&lt;/p&gt;
+&lt;p&gt;在Scenario下方的Randomizer栏中点击Add Randomizer即可添加随机器，我们先添加上述的两个随机器，可以发现其中有各种可以设置的参数。&lt;/p&gt;
+&lt;p&gt;对于SunAngleRandomizer而言，它可以将拥有SunAngleRandomizer Tag组件的游戏目标(在此情况下是Direction Light)进行随机化，通过设置时间，日期以及纬度的随机范围，可以模拟出各种情况下的太阳光。(有许多随机器需要Randomizer Tag来标识需要随机化的物体)&lt;/p&gt;
+&lt;p&gt;对于BackgroundObjectPlacementRandomizer来说，它会生成多层背景，你可以设置背景生成位置，层数以及组成背景的物品列表，物品之间的最小间隔。该随机器会随机调用列表中的物品，在生成范围内随机摆放物体。(部分随机器不需要Randomizer Tag，可以直接将游戏对象以参数的形式输入至随机器)&lt;/p&gt;
+&lt;p&gt;配置好我们需要的随机器后，可以通过运行游戏来测试一下随机器的运行状况。如果在之前已经设置好了Perception Camera和对应的ID Config，你可以在游戏运行中查看Labler标识出的信息(物体颜色，物体数量，所占屏幕大小等等)。而捕获的RGB图片以及其他数据也会输出到某个地方可供查看。打开Perception Camera的检视器，点开下方的Latest output folder, 即可检查输出的数据集。&lt;/p&gt;
+&lt;hr&gt;
+- http://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/ - </description>
+        </item>
     
     
     
         <item>
         <title>学习Markdown语法</title>
-        <link>https://makichan520.github.io/post/markdown/</link>
+        <link>http://makichan520.github.io/post/markdown/</link>
         <pubDate>Sun, 04 Apr 2021 01:29:42 +0900</pubDate>
         
-        <guid>https://makichan520.github.io/post/markdown/</guid>
-        <description>Darjee&#39;s Blog https://makichan520.github.io/post/markdown/ -&lt;h2 id=&#34;从零开始学习markdown&#34;&gt;从零开始学习Markdown&lt;/h2&gt;
+        <guid>http://makichan520.github.io/post/markdown/</guid>
+        <description>Darjee&#39;s Blog http://makichan520.github.io/post/markdown/ -&lt;h2 id=&#34;从零开始学习markdown&#34;&gt;从零开始学习Markdown&lt;/h2&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？) &lt;!-- raw HTML omitted --&gt;
 &lt;strong&gt;为了各位看官老爷的良好体验，建议直接观看代码块部分&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;标题&#34;&gt;标题&lt;/h4&gt;
@@ -152,8 +218,20 @@ _   下划线
 
 &amp;lt;font color=green face=&amp;quot;微软雅黑&amp;quot; size=6&amp;gt;绿色 微软雅黑 字号6  &amp;lt;/font&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;后续可能会补充吧毕竟学习使用中用多少写多少&#34;&gt;后续可能会补充吧，毕竟学习使用中，用多少写多少&lt;/h3&gt;
-- https://makichan520.github.io/post/markdown/ - </description>
+- http://makichan520.github.io/post/markdown/ - </description>
         </item>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
   </channel>

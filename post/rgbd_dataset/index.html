@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Posts</title>
+<title></title>
 
 
 
@@ -16,10 +16,15 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Apostate only am I true. I am you, when I am I." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://makichan520.github.io/post/" /><meta property="og:site_name" content="My Blog" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="为了验证exr文件是否正常运作，编写了一个用于合并图片的Python脚本，该脚本需求openexr库。
+我们使用anaconda来安装该库。
+conda install -c conda-forge openexr
+记得以管理员权限运行cmd。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://makichan520.github.io/post/rgbd_dataset/" /><meta property="article:section" content="post" />
+
+<meta property="og:site_name" content="My Blog" />
 
 
 
@@ -27,8 +32,11 @@
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Apostate only am I true. I am you, when I am I."/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="为了验证exr文件是否正常运作，编写了一个用于合并图片的Python脚本，该脚本需求openexr库。
+我们使用anaconda来安装该库。
+conda install -c conda-forge openexr
+记得以管理员权限运行cmd。"/>
 
 
 
@@ -63,7 +71,29 @@
 
 
 
+  
+    <script src="http://makichan520.github.io//js/toc-collapse.js"></script>
+  
 
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: '',
+  owner: '',
+  admin: [''],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
 
 
 
@@ -132,6 +162,11 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -147,8 +182,6 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 brightness_7
             </i>
         </a>
-        
-        
         
         
     </div>
@@ -180,6 +213,11 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 </a>
                 
             
+            
+            <div class="toc">
+
+
+</div>
             
         </div>
     </div>
@@ -224,195 +262,73 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        
-            <a class="a-block">
-                <div class="post-item-wrapper post-item-wrapper-no-hover">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title post-item-title-small year">
-                                2021
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
+        <div class="post">
             
-            <a href="/post/markdown/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                学习Markdown语法
-                            </div>
-                            <div class="post-item-meta">
-    2021-04-04
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            
+            
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-        
-            <a class="a-block">
-                <div class="post-item-wrapper post-item-wrapper-no-hover">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title post-item-title-small year">
-                                0001
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/%E5%B0%8F%E7%B3%B8lp/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    0001-01-01
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    
+                    
+                    <div class="post-meta">
+                        
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/%E5%9F%BA%E4%BA%8Eperception%E5%8C%85%E5%88%9B%E5%BB%BArgbd%E6%95%B0%E6%8D%AE%E9%9B%86%E6%AF%95%E8%AE%BE%E6%8B%BE%E9%81%97/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    0001-01-01
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+                        
 
-                        </div>
+                        
+                        
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/post/untitled/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    0001-01-01
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>为了验证exr文件是否正常运作，编写了一个用于合并图片的Python脚本，该脚本需求openexr库。</p>
+<p>我们使用anaconda来安装该库。</p>
+<p><code>conda install -c conda-forge openexr</code></p>
+<p>记得以管理员权限运行cmd。</p>
 
-                        </div>
-                    </div>
+                    
                 </div>
-            </a>
+            </div>
             
-            <a href="/post/rpg-maker-%E9%9A%8F%E8%AE%B0/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    0001-01-01
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            
+            <nav class="post-pagination">
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/rgbd_dataset/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    0001-01-01
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+                
+                <a class="newer-posts" href="http://makichan520.github.io/post/readme/">
+			下回<br>
+                </a>
+                
+                
+                
+                <a class="older-posts" href="http://makichan520.github.io/post/rpg-maker-%E9%9A%8F%E8%AE%B0/">
+			上回<br>
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/readme/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    0001-01-01
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-        
-    </div>
-</div>
+<div id="gitalk-container"></div>
+
+
+
+
 
 
             </div>
+        </div>
+    </div>
+</div>
 
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
 <br>
 移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>

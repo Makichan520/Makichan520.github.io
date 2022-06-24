@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Darjee&#39;s Blog</title>
-    <link>https://makichan520.github.io/categories/</link>
+    <link>http://makichan520.github.io/categories/</link>
     <description>Recent content in Categories on Darjee&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate><atom:link href="https://makichan520.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate><atom:link href="http://makichan520.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learn</title>
-      <link>https://makichan520.github.io/categories/learn/</link>
+      <link>http://makichan520.github.io/categories/learn/</link>
       <pubDate>Sun, 04 Apr 2021 01:29:42 +0900</pubDate>
       
-      <guid>https://makichan520.github.io/categories/learn/</guid>
+      <guid>http://makichan520.github.io/categories/learn/</guid>
       <description></description>
     </item>
     

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Darjee&#39;s Blog</title>
-    <link>https://makichan520.github.io/post/</link>
+    <link>http://makichan520.github.io/post/</link>
     <description>Recent content in Posts on Darjee&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate><atom:link href="https://makichan520.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate><atom:link href="http://makichan520.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习Markdown语法</title>
-      <link>https://makichan520.github.io/post/markdown/</link>
+      <link>http://makichan520.github.io/post/markdown/</link>
       <pubDate>Sun, 04 Apr 2021 01:29:42 +0900</pubDate>
       
-      <guid>https://makichan520.github.io/post/markdown/</guid>
+      <guid>http://makichan520.github.io/post/markdown/</guid>
       <description>从零开始学习Markdown 要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？) 为了各位看官老爷的良好体验，建议直接观看代码块部分
 标题 1.使用#号＋空格来表示标题(Header)，#的数量代表标题级数&amp;lt;和html类似&amp;gt;。 标准md格式下有h1~h6六种大小的标题，其中一级标题最大。
 2.另一种的方式是使用两种下划线 === 和 &amp;mdash; 来进行文字大小的控制，值得一提的是该方式只能标识一级标题与二级标题：
@@ -32,6 +32,215 @@ Markdown格式下的链接插入：
 [链接标题](链接URL) ——&amp;gt; 偶像的战斗，不是杀就是被杀
 图片插入： ![图片名](图片URL或本地路径) (好看吗，快来入坑闪耀色彩吧)
  列表 md下的列表与其说是表不如说是一种段落标识，类似在每个段头打上序号或者标点。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://makichan520.github.io/post/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://makichan520.github.io/post/readme/</guid>
+      <description>Guide for generating RGB-D dataset with Unity ​	The purpose of this guide is to briefly explain how to automate the generation of RGBD datasets using this Unity program. Since this project makes extensive use of the Perception package, users can refer to the README in the Perception to work with it.
+If you just want to do data generation, you can refer to the easy tutorial in the perception package first, and then follow the guidelines in section Ⅰ to proceed.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://makichan520.github.io/post/rgbd_dataset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://makichan520.github.io/post/rgbd_dataset/</guid>
+      <description>为了验证exr文件是否正常运作，编写了一个用于合并图片的Python脚本，该脚本需求openexr库。
+我们使用anaconda来安装该库。
+conda install -c conda-forge openexr
+记得以管理员权限运行cmd。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://makichan520.github.io/post/rpg-maker-%E9%9A%8F%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://makichan520.github.io/post/rpg-maker-%E9%9A%8F%E8%AE%B0/</guid>
+      <description>Yep插件相关 小雾文字颜色：\C[5]
+地图提示颜色：6
+物品品质颜色：2(橙色) 1(蓝色) 3 (绿) 31 (紫) 18(红色)
+Extended Message Pack 1
+更多选项的用法是让两个显示选项连接到一起
+G图标： 5712
+红色药剂图标：5249
+TODO LIST：
+其实还啥都没做
+万事开头难，设计初始剧情  大概确定世界观，用初始地图的开始触发事件设计起始剧情。
+初始地图设计 √
+剧情：
+日花倒地图，法术效果，醒来。
+日花：唔。。。。
+雾：ふふ，终于醒来了…
+日花：这里是…?
+雾：这里…可以说是你“死后”的世界吧。
+日花：诶，我死了吗？
+雾：虽说是死了一次，但勉强能算是活着。
+你的灵魂被我固定到了现在这副身体上，但其联系并不牢固…
+日花：(这么说来，确实不能随便移动身体…)
+你是谁啊？话说你说的我完全听不懂诶。
+雾：ふふ…没关系的，我要说的并不多。
+——如果想活下去的话，就签订契约吧。
+这份契约，能够让你重回现世…
+日花：为毛啊？这一听就是什么不平等条约吧。在这里装神弄鬼的，厨二病？
+(触发后续事件，模型移动，强制签订契约)
+雾：那么…契约成立了…
+[ 战胜恐惧，成为勇者 ]
+日花：诶诶？咋回事啊！(被传送)
+雾：抱歉，日花さん，因为时间快不够了……
+公共事件0 :
+天空中，血雨已下了三回（场景1）
+大地上，亡者在乞求安宁 （场景2）
+悲伤与愤怒，迷茫与痛苦…
+只有你能消化这一切。
+ -howa，那个…早上好。
+-啊，你好（现在算早上吗？)
+-失礼了，自我介绍一下，我是樱木真乃，是这片森林的守护人。
+不瞒您说，已经很久没有人来拜访我了，有点被吓到了，呵呵。
+-(欸…好可爱)
+啊啊…不好意思，我没想要吓你的。
+-没关系，那么，您想好了您的愿望吗？
+-愿望？
+-嗯？穿越这片森林的冒险者可以在尽头实现自己的愿望，您没听说过这一传说就到了这里吗？
+森林往后是受女神祝福的土地，在实现愿望后，一些冒险者选择在那里度过余生。
+-（讲真？面前这个女孩不像是在说谎的样子。。。）
+-那个，您不需要许愿吗？
+-不不不，当然要…
+(虽然我完全没有穿过什么森林，也没付出什么代价…但是便宜不占总感觉对不起自己…)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://makichan520.github.io/post/untitled/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://makichan520.github.io/post/untitled/</guid>
+      <description>Abstract(introduce the task or motivation of thesis)
+Chapter 1
+Introduction:
+ background introduce
+  Computer version
+1.1 Object rec
+1.2 object det
+1.3 object segmentation
+1.4
+  machine learning
+  RGB color space
+  depth image
+  6D pose dataset
+  Unity 3D
+· 总览
+6.1 Component model(game engine architecture)
+6.2 Physic engine
+6.3 Rendering Pipeline
+6.4 Event lifecycle
+6.5 Script driving programming
+  Chapter 2</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://makichan520.github.io/post/%E5%9F%BA%E4%BA%8Eperception%E5%8C%85%E5%88%9B%E5%BB%BArgbd%E6%95%B0%E6%8D%AE%E9%9B%86%E6%AF%95%E8%AE%BE%E6%8B%BE%E9%81%97/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://makichan520.github.io/post/%E5%9F%BA%E4%BA%8Eperception%E5%8C%85%E5%88%9B%E5%BB%BArgbd%E6%95%B0%E6%8D%AE%E9%9B%86%E6%AF%95%E8%AE%BE%E6%8B%BE%E9%81%97/</guid>
+      <description>Unity基于Perception包创建RGBD数据集——毕设拾遗 · 前言 ​	历经假期2个月，终于找到了缺人而且愿意招本科生的本校毕设题目（说是毕设其实是毕业论文）。给老板干活闲暇之余以此博客记录一下毕设始末以及踩的各种坑。
+​	毕设题目是使用Unity来生成RGBD图片以及数据，该数据集会用于实验室里机械臂的深度学习项目中。因为生成数据涉及Unity、C#、计算机视觉(摄像机原理)等知识，而这其中我没有一项是会的，所以是边学边做的状态下进行的毕设，看官们大概都比我强不少，不过至少可以作为Unity的Perception包指南来略作参考，我也会通过一个完全初学者的视角来展示开发过程。
+​	Perception包可以生成用于计算机视觉相关训练和验证的大型数据集，该包基于C#实现，在Unity上运行。具有自定义随机场景，调整相机设置，生成图片以及相关数据等功能，可以提供符合机器学习任务要求的数据集。
+· 事前准备 ​	Unity 安装
+​	C#开发环境配置（以及和Unity的绑定设置）
+​	创建URP或HDRP项目，在项目中导入Perception包
+​	【Github项目地址】
+在Unity界面中，Window -&amp;gt; Package Manager 调出拓展包管理窗口，点击Add package from git URL并输入 com.unity.perception 即可。也可以通过输入特定版本的URL来安装特定版本的拓展包。
+ · 使用范例 ​	有英文基础的可以直接查看Perception包的github页面，上面有基本的教程范例。本节我会以其为基础来展示创建简单数据集的步骤范例。
+  创建Scene
+在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要随机化的GameObject也需要你先放入Scene中(例如Direction Light)，当然也可以在之后设置Randomizer时再行设置。
+  配置Perception Camera
+新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera
+  ​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关数据。
+​	Description即该摄像机的概述，一般为摄像机名
+​	Show Labeler Visualization 勾选后会在UI界面实时显示Labeler标识的信息
+​	Save Camera Rgb output to 勾选后会将捕获的图片以文件输出到磁盘中(路径为下面的Lastet Output Folder)
+​	Capture Trigger Mode 为摄像机捕获模式的设定，Schedule会让相机周期性地捕获图片，Manual则需要在其他脚本内写入RequestCapture()函数来手动捕获图片</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://makichan520.github.io/post/%E5%B0%8F%E7%B3%B8lp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://makichan520.github.io/post/%E5%B0%8F%E7%B3%B8lp/</guid>
+      <description>1、墨子糸に泣く
+大多小时候的事情都已经记不清了
+是的，正因为福丸同学在家中也有认真学习
+考试的结果也很完美\n是有上过补习班吗
+没有…不过长假授课是有在参加的
+是这样啊\n 所以说如果能做到这个份上的话….
+(脑海中模糊浮现出的，是两岁时从某处摔下来，而让父母非常担心这件事)
+您可能觉得距离入学还没过多久
+但我希望从现在开始，您能在家里好好商量一下关于未来规划的问题
+好的，那是——
+(三岁，学会了一个人读绘本\n被好好表扬了一番)
+非常感谢您今天能抽出时间来
+嗯，今后也拜托您了，多谢关照
+。。。非，非常感谢
+（上幼儿园的时候，和透还有円香一起手牵手上学）
+（有一天，父亲如此说道，“小糸你要当姐姐了喔”）
+。。。妈、妈妈，也谢谢你今天能来
+振作一点呀小糸\n老师不也说了你总是缺乏自信
+我要去买点晚饭用的东西再回去\n 小糸准备怎么样
+啊….我得去事务所一趟…没、没事的
+这样啊，那你一路当心哦
+您、您好
+诶，怎么了小糸\n气喘吁吁的
+啊，不、不是…
+今天又来事务所的安排吗？\n我记得应该是没有的才对…
+三、今天有三方面谈\n已经开完了
+这样吗，那就好…\n啊 不过正好
+刚想要联系你，准备问一下你关于这次单独演唱会的想法
+….!\n这、这样啊！
+这样的话，幸好我来了……!
+哈哈，是的\n那么赶紧进入正题
+小糸这边如果有什么想法的话，希望你想到就直接说出来
+我们充分交流，来创造一个满意…能让大家感到满足的舞台吧！
+好，好的！
+(得按照被需要的样子活着\n不这样的话)
+……会觉得自己不该留存于这个地方
+2、ささくれた指先
+——好了，要出发咯
+谢、谢谢你制作人\n明明还完全是有巴士的时间……
+没事的\n正好训练结束，这样的话可以早点回家好好休息对吧？
+恩，是的！
+宣布办演唱会后反响很大\n大家应该都在等着演唱会吧
+是这样啊…
+那，我得做更多训练\n必须办一场精彩的演唱会才行…
+哈哈，小糸已经很努力了\n……不过，说的也对。
+我和你一样，想要把演唱会办好
+——那个、\n这边是往右转对吧？
+啊…..就、就送到这边就好！\n真的已经离家很近了……!
+这样吗？那就送到这儿吧\n今天辛苦了，小糸
+-
+——啊咧，姐姐？\n现在回家吗？
+-
+为、为什么你会出现在这里啊……!
+-
+小糸，怎么了？\n没事吧？
+啊……晚上好\n是制作人先生，对吧？
+姐姐这边一直受您照顾了
+……!\n晚上好
+我这边才是受关照了\n 那个、是小糸的妹妹…吗？
+是的
+所以说你为什么会在这里!\n明明已经快到九点了！
+因为自动铅笔芯用完了，我想去趟便利店\n但是姐姐现在回来的话就拜托你好了
+那样的话联系我就好了！\n话说笔芯的话房间里明明还有吧！
+因为最近你不是回家很晚吗？\n所以我以为你会再晚点才回来
+发生什么事了吗？\n比如大会什么的
+…….那个</description>
     </item>
     
   </channel>

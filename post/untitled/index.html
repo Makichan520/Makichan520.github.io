@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html><head>
+<title></title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Abstract(introduce the task or motivation of thesis)
+Chapter 1
+Introduction:
+ background introduce
+  Computer version
+1.1 Object rec
+1.2 object det
+1.3 object segmentation
+1.4
+  machine learning
+  RGB color space
+  depth image
+  6D pose dataset
+  Unity 3D
+· 总览
+6.1 Component model(game engine architecture)
+6.2 Physic engine
+6.3 Rendering Pipeline
+6.4 Event lifecycle
+6.5 Script driving programming
+  Chapter 2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://makichan520.github.io/post/untitled/" /><meta property="article:section" content="post" />
+
+<meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Abstract(introduce the task or motivation of thesis)
+Chapter 1
+Introduction:
+ background introduce
+  Computer version
+1.1 Object rec
+1.2 object det
+1.3 object segmentation
+1.4
+  machine learning
+  RGB color space
+  depth image
+  6D pose dataset
+  Unity 3D
+· 总览
+6.1 Component model(game engine architecture)
+6.2 Physic engine
+6.3 Rendering Pipeline
+6.4 Event lifecycle
+6.5 Script driving programming
+  Chapter 2"/>
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="http://makichan520.github.io/scss/journal.min.c116bc90d171283f099f173854157ec8f183f9073b93443b2c8ad82899ee9025.css" integrity="sha256-wRa8kNFxKD8Jnxc4VBV&#43;yPGD&#43;Qc7k0Q7LIrYKJnukCU=" media="screen">
+
+
+
+<link rel="stylesheet" href="http://makichan520.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
+
+
+<script src="http://makichan520.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="http://makichan520.github.io//js/toc-collapse.js"></script>
+  
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '',
+  clientSecret: '',
+  repo: '',
+  owner: '',
+  admin: [''],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://makichan520.github.io/">
+    
+        <div class="nav-title">
+            Darjee&#39;s Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            .
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 Darjee&#39;s Blog
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="http://makichan520.github.io/">
+            Darjee&#39;s Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://makichan520.github.io/">
+        <div class="single-column-header-title">Darjee&#39;s Blog</div>
+        
+        <div class="single-column-header-subtitle">.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    
+                    
+                    <div class="post-meta">
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>Abstract(introduce the task or motivation of thesis)</p>
+<p>Chapter 1</p>
+<p>Introduction:</p>
+<ol start="0">
+<li>
+<p>background introduce</p>
+</li>
+<li>
+<p>Computer version</p>
+<p>1.1 Object rec</p>
+<p>1.2 object det</p>
+<p>1.3 object segmentation</p>
+<p>1.4</p>
+</li>
+<li>
+<p>machine learning</p>
+</li>
+<li>
+<p>RGB color space</p>
+</li>
+<li>
+<p>depth image</p>
+</li>
+<li>
+<p>6D pose dataset</p>
+</li>
+<li>
+<p>Unity 3D</p>
+<p>· 总览</p>
+<p>6.1 Component model(game engine architecture)</p>
+<p>6.2 Physic engine</p>
+<p>6.3 Rendering Pipeline</p>
+<p>6.4 Event lifecycle</p>
+<p>6.5 Script driving programming</p>
+</li>
+</ol>
+<p>Chapter 2</p>
+<p>Requirements Analysis and Design</p>
+<p>逐个分析任务所需要的数据，要求以及难点。包含系统目标，对象，可行性以及功能性需求。</p>
+<p>需求分析：</p>
+<ol>
+<li>
+<p>【功能需求】：使用PVN3D网络来解决机器人视觉中的6D位姿估计，介绍PVN3D,以及其在识别竞赛中取得高分的数据库(大概是什么样子的RGBD图片)。然后得出对数据集的要求（数量，格式，标签，像素以及分辨率等）,以及对图片中环境的改变(光照，摆放，物体数量)。其次，需要能够针对性的生成一些场景，并且能够同时保证场景中物品的随机性，以维持数据集中数据的差异性，应该能够导入相应的目标物品，并且可以根据特殊需求来调整拍摄图片的方式(例如一定角度，距离主物体的范围，必须囊括目标物体等)，以生成各种类型的数据集。</p>
+</li>
+<li>
+<p>【验证需求】：再者是对数据进行二次验证需要图片中物体6D数据，生成图片所使用的摄像机数据(内参外参，可能需要世界坐标)，还有模型的3D mesh数据，用于生成点阵图来验证RGBD生成是否正确并且进行相关修复。</p>
+</li>
+<li>
+<p>【性能需求】：或者说是对硬件的需求，在通常的RGBD数据集生成中，用到的一般是深度相机(Kinect)，此处我们用Unity引擎作为平台生成数据集，对生成速度需求不高(即使如此也比实地生成要快很多很多)，对储存和CPU有一定需求但不高(笔记本仍可运行与测试)。因此小型项目和大型项目都理应可以适用这个方法来生成数据集。</p>
+</li>
+</ol>
+<p>最后根据需求来进行系统设计的介绍。(需要画结构图/逻辑图等)</p>
+<p>最好是分部介绍：总体设计逻辑(结构)  -》 每个部分的逻辑和数据结构</p>
+<p>&ndash; 场景布置与理由 &ndash; 随机化 &ndash; 相机捕获 &ndash; 数据输出与分析</p>
+<p>·总体设计逻辑：设计多个场景，场景生成需要随机化生成物体，在随机位置生成随机物体&lt;各种物体需要分类&gt;，生成之后需要控制摄像机对目标进行拍摄，并且有自定义配件，在拍摄时，捕获各种标签信息，并且同时捕获深度图像，这需要随机化生成和相机管理协同进行，在最后需要将RGB图片，深度图和对应的数据一同传输出去，同样，我们希望能够对输出数据的类型进行调控，因此需要在程序中设置相应的配件。因此，计划把系统分为3个子系统，分别负责场景随机化，相机捕获和数据获取以及输出。</p>
+<p>场景布置与随机化</p>
+<p>Unity可以通过Scene作为单位制作多个互不干扰的场景，而由于多种场景在设计层面是相似的，所有Scene可以使用相同的功能组件来生成场景，在此节中我们只讨论办公室场景的生成。</p>
+<p>在场景布置中，物品一般有两种方式生成，一种是在代码执行，即游戏软件运行前就已经布置在场景当中的物体，这些物体由开发者手动生成，一经创建就可以用Unity的Hierarchy视窗进行监视管理，另一种是在代码运行时生成的物体，代码层面，他们也属于GameObject，生成时也会在Hierarchy视窗创建一个GameObject，比起预设置的物体，运行时生成的物体更难以管理，但在随机化时更加灵活，可以根据设计目的生成在指定位置，因此在场景布置时，合理分配两种生成方式是十分重要的。</p>
+<p>首先，每个Scene都需要一个基础背景，例如一个平面作为地面，一间房间作为随机生成物品的空间，这些物品都不需要参与随机化，而是提前在Scene中生成好即可。随后的物品生成则需要参考背景的大小、位置，以合理调整放置物体的区域。</p>
+<p>在用户自定义随机化内容时，如果在运行前生成物品，则需要在随机化过程中对物品的位置和姿态进行变更，这同样涉及到运行时使用程序对物品的数据进行管理，在实现难度上和运行时生成物体差别不大，另一方面，由于我们假定已经生成了物体，那么我们就无法对生成物体的种类和数量进行随机调整，而是只能将特定的物体随机摆放，这显然违背了程序“自定义随机”的主旨，所以在随机化环节，我们选择在运行时生成物体。</p>
+<p>&lt;介绍预制体，并阐述此处预制体的使用例&gt;</p>
+<p>除了物品的生成和放置，场景随机化还有许多其他部分，例如光照条件，物体材质与颜色，天空盒等等，对于不同的随机内容，我们可以设置多个随机器，并周期性地进行随机化。由于部分随机器需要识别特定物体，不同随机器的任务应该独立进行互不干扰，在此我们对相关物体进行标记，对于特定的随机内容，还可以在标记上添加具体的随机范围，这也大大增加了程序的拓展性能。最后，所有随机器都应该被一个控制器管理，控制器负责调控随机数，随机周期，并且在游戏运行期间驱动所有随机器，我们将其命名为Scenario,用户应该能在Scenario处调整随机流程。。。。。</p>
+<p>相机捕获</p>
+<p>Unity在预设组件中为开发者准备了Camera，他涵盖了开发环境中一个标准相机的基本功能，在一个场景中可以拥有复数摄像机，每个摄像机都进行独立渲染，且该组件内设置了多种属性，用户可以根据需求来调整，例如Culling Mask，用于选择性地删除不需要渲染的内容，Projection用于调整透视方式，Field of view用于调整视角大小等等。在进行相机捕获时，我们可以以Unity提供的相机组件作为基础，设计用于生成RGB图片的相机，即perception camera。</p>
+<p>RGB图片捕获十分简单，直接使用标准Camera的功能所生成的图片即是RGB图片，重要的是要在同样的位置和角度设置深度相机，并进行深度图的获取，我们可以将深度相机作为Component添加在标准相机中，或者利用Unity的子对象特性，将RGB相机和深度相机作为游戏对象捆绑到同一个父对象上，这两种方法都可以保证所有情况下，两种相机的位置和角度一致，而捕获时间则需要在代码层面控制，由于Unity的渲染更新以帧为单位，我们只需要保证每次拍摄时，两个相机都在同一帧进行了捕获，就可以使RGB图片和深度图完全匹配。</p>
+<p>在生成图片的问题解决后，我们需要考虑下一个问题：应该在什么时间什么位置进行图片捕获？在每一次背景随机化完成之后，场景都会是完全不同的，我们无法在固定的位置摆放相机，而是需要参照目标物体甚至其他场景物体的具体位置才能对相机进行布置，再者，用户时常对生成的RGB-D图片有特定需求，例如在本项目中，拍摄的物体应该处于稳定静止的状态，拍摄的图片应该包含所有目标物体，且目标物体的大部分不应该被其他物体遮挡。上述的所有功能都需要摄像机作为检测器来提供，同时还需要摄像机和随机化部分进行协同，因为摄像机相对目标物体的位置和角度同样需要随机化，否则拍摄出的图片将不具有多样性。</p>
+<p>利用现有的系统，一个合适的做法是添加一套相机的随机器到场景随机系统中，Scenario可以一并管理场景随机和相机随机，只是相机需要在场景随机布置后进行运转，而相机本身连接到随机器上，随机器可以调用相机的数据进行检查，使随机结果合乎特定需求，如果符合则允许相机进行拍摄。</p>
+<p>便签数据</p>
+<p>在深度学习中，标签是用于标记事物属性的数据，通常是描述一个物件的种类。机器学习以特定的算法，提取数据的特征，再构造从特征到标签的映射，因此标签在机器学习中最常规的用途就是验证算法的性能和正确性。在生成了RGB-D图片后，我们还需要输出关于标签的数据，这其中包括了语义分割、实例分割的图片数据，还有记录图片中标签信息的通常数据，程序还需要为用户提供自定义标签，为物品打标签，以及调整输出数据类型的功能。</p>
+<p>生成标签数据的前提是，场景中的物体需要先打上标签，在Unity中，物品以游戏对象的形式存在，那么依附于物品的标签也会添加到游戏对象上，一种简便的做法是将标签作为组件添加进游戏对象，因为一个物品可以有复数特征，标签组件应该包含物体的所有标签信息，而标签本身也有多种类型，例如ID标签将特定标签以数字ID区分开，语义分割标签将物体以特定颜色呈现。我们需要一种类来管理特定标签组，相机则可以通过套用该类，在捕获图片的同时输出标签数据。</p>
+<p>最后，我们必须设计相机贴标器，用于套用标签设置，在相机捕获时获取画面中关于标签的信息，并且将其记录在文件中，贴标器可以根据用户的需求调整数据类型，并且一个感知相机应该可以和多个贴标器协同运行，此外，其他少数与标签不相关的数据也可以记录在贴标器中一并输出，例如有关相机的参数，图片生成时照片的曝光程度等等，不仅可以用于其他部分的数据验证，也提高了代码的可重用性。</p>
+<p>在完成了以上3个子系统的设计后，我们可以将三个子系统整合到一起，并得到一个整体的系统设计模式。</p>
+<p>&lt;图&gt;</p>
+<p>Chapter 3</p>
+<p>Implementation and Test</p>
+<p>(简单而言就是根据实现思路一步步讲解，截图，说明原因，核心内容附上部分代码)</p>
+<p>开头：本节目的，阐述详略，总体实现思路（自上而下，实现根据需求变动），从布置基本场景，导入Assets开始，到代码层面的设计Scenario，设计Randomizer，并且和Camera联动，重点描述随机场景的实现。</p>
+<p>再详细讲解相机相关，如何规制相机的拍摄</p>
+<p>Labeling相关则需要讲解Segmentation相机，各种Labeler的实现，最后涉及到JSON文件数据的输出与格式</p>
+<p>实现讲解完毕后，介绍前后两次测试的结果(此时不需要机器学习的内容，后面Conclusion里再介绍)，即第一次SimpleScene和第二次OfficeScene的生成数据</p>
+<hr>
+<p>在本节，本文将解释程序各个部分的实现过程，由于篇幅有限，只会在关键实现上详细介绍。根据上文的需求分析和系统设计，程序采用了已开源的Perception包来辅助完成系统实现，该包在实现中的作用以及实现细节也会适当介绍。</p>
+<p>虽然本程序的设计初衷是让大部分功能可以根据用户的需求自行调整，但是让整个系统都脱离实际需求来实现显然不可能，在随机化和相机调整方面，本文会依照项目中的实际需求来进行实现。同时，程序实现基于自上而下的设计模式，从Scene和Scenario开始，再考虑后续随机器和相机的实现细节，最后标签相关的类与组件作为系统的补充，添加到相机和物体中。</p>
+<ol>
+<li>场景布置以及模型导入</li>
+</ol>
+<p>​	和现实中拍摄RGB-D图片数据一样，在Unity中生成RGB-D数据集时，需要一个相对固定的空间，例如在一间办公室中，这相当于给背景生成提供了一个有限制的布景，此次我在Scene中搭建了一间简单的办公室，其中包含天花板、墙壁、窗户、门等常见场景物品，同时通过方向光和点光源来模拟环境中的太阳光和灯光&lt;图片&gt;。另一方面，模型资源是我们生成背景的基本，我们可以根据背景的主题来创建Assets，一个更好的方法是在Unity官方的Assets store中获取符合主题需求的模型并直接导入到项目中。</p>
+<ol start="2">
+<li>
+<p>场景随机化实现</p>
+<p>场景随机化是系统实现中最重要也是最复杂的部分，依照上节中的系统设计，Scenario是该子系统的核心，Randomizer则负责各个模块的随机化。</p>
+<p>2.1 Scenario implementation</p>
+<p>​	上一节提到过，Scenario是场景随机化中的控制器，负责在游戏运行的过程中进行帧到帧的反应，并且调动所有下属的随机器。Unity中的MonoBehavior类就能满足这一需求。MonoBehavior是所有Unity脚本的基类，能在Unity的绝大部分活动流程中进行响应，如游戏启动，帧更新，图像渲染，鼠标输入等等，因此具有极高的拓展性。Scenario只需要在启动时加载用户的设置，在游戏运行时周期性地调用随机器即可。</p>
+<p>​	perception包中提供了一些Scenario基类和一种简单的Scenario实现，即FixedlengthScenario，顾名思义，该Scenario的每个周期内的帧数是固定的，它将在运行一定周期后停止。这已经符合了我们对于Scenario的需求，即可以周期性调控随机器的行为，因此该项目直接选用了perception包中自带的FixedLengthScenario类。</p>
+<p>&lt;图片，解释&gt;</p>
+<p>2.2 Randomizer implementation</p>
+<p>​	当然，脱离了随机器的Scenario只是空壳，我们可以直接使用Perception包中随机器的抽象类，并且根据需求进行进一步的定制。</p>
+<p>通过选择性地实现以下方法，我们可以自由调控随机器在模拟中的活动：</p>
+<ol>
+<li>OnCreate() - 在随机发生器被添加或加载到场景时调用</li>
+<li>OnIterationStart() - 在新场景迭代开始时调用</li>
+<li>OnIterationEnd() - 在场景迭代完成后调用</li>
+<li>OnScenarioComplete() - 在整个场景完成后调用</li>
+<li>OnStartRunning() - 在第一帧调用 Randomizer 被启用</li>
+<li>OnStopRunning() - 在第一帧调用一个禁用的随机化器被更新</li>
+<li>OnUpdate() - 为启用的随机化器执行每一帧(eng建议直接看git上)</li>
+</ol>
+<p>通过调用以上七种函数，随机器能与Scenario协同运行并完成项目所需的随机效果。</p>
+<p>&lt;图片(git page of scenario)&gt;</p>
+<p>完成随机器的实现前，我们需要考虑如何让Unity生成随机数据，UnityEngine类中含有随机类，提供了一些初级的伪随机生成方法，在只需要对少数简单数据的情况下，Random类足够开发者使用，例如在单位圆、单位球内生成随机点，或是生成随机旋转状态(欧拉角)等等。但在本项目中，Random类显然不能实现所有的定制化要求，为此，还需要一个类作为随机数据的基类，专门生成特定类型的随机数据，名为Parameter，随机器可以通过构造Parameter决定随机类型和随机范围，并且通过调用Parameter的方法来生成特定的随机数据。</p>
+<p>&lt;图片(随机块类图)&gt;</p>
+</li>
+</ol>
+<p>​	2.2.3 Background randomize</p>
+<p>​		在讨论背景随机化之前，我们需要了解在Unity中进行物体生成的基本逻辑，Unity将一个预制体作为参数，在确定缩放比例和旋转状态的情况下，将物体生成到特定的位置。在本项目中，我们期待物体保留一切物理特性，并且拍摄时，保证镜头中的物体处于静止状态。默认情况下，Unity生成的物体并不会具有任何物理特征，我们需要添加刚体、碰撞体等组件让场景物体的预制体具有质量，受其他外力影响，并根据物体本身来调整重量以及碰撞判定等等。</p>
+<p>在理想的情况下，大型物体被生成在地面上，并且相互之间保持一定距离，而小型物体则散落在地面和大型物体之上，最后，目标物体会在随机一张桌面上生成，等待场景中物体静止后，可以使用感知相机进行数据捕获。</p>
+<p>如果我们想要直接在地面上生成物体，生成位置会成为问题，一般情况下，物体的位置指整个物体中心的坐标，如果我们希望物体底部正好接触地面，那在每次生成时都需要测量物体中心距离底部的高度。同样，对于小型物体来说，如果让它们直接生成在桌面上，也需要获取桌面的高度，并且也需要测量小型物体中心距离底部的高度。以上方法十分复杂，由于场景中的需要生成的物体可能有很多，这会增加程序运行时的负担。</p>
+<p>本项目的场景随机器采用了一个更好的思路。每个随机周期开始时，先将大型物件生成在半空中，用户需要调控生成高度，使其高于所有物件的默认高度，同时在这批物体上方生成小型物件，让这些物体进行自由落体，在调整物体和地面的弹性系数后，物体在碰撞后只需要等待几秒就会静止，小型物体则会被摆放在地面或大型物体的表面上。在生成大型物体时，如果该物体是类似桌面的物体（下文统一称为类桌物体），程序会记录下它的信息，在以上的场景生成完毕后，可以调用这些信息来在随机桌面上生成目标物体，以完成我们对场景的布置。</p>
+<p>&lt;图片：前几帧生成的场景&gt;</p>
+<p>在代码层，随机器在被构造时会创建3个容器，分别用来容纳可以作为桌面的大型物件，普通的大型物件和小型物件，用户可以在三个列表中随意添加合适的物体，此外，所有类桌物体都需要额外一类组件用于记录它们的信息，因为我们需要保证这类物体的桌面朝上，且后续的目标能准确生成在桌面上。</p>
+<p>随机器具有三种状态，一种是生成底层物体的状态，当周期开始，随机器根据物体列表在指定高度指定范围内随机生成大型物体和小型物体，在指定分隔距离后，所有生成物体时会保证它们之间的距离不超过该分隔距离。</p>
+<p>第一种状态结束后，随机器会等待一定帧，让场景物体停止运动。这个等待的过程便是随机器的第二种状态。</p>
+<p>等待结束后，随机器进入第三个状态，在已经标记好的桌面列表中随机选择一个物体，让目标物体在其上随机位置生成，同时，用户也可以让小型物件和目标物体同时生成在桌面上，让场景更加多样。</p>
+<p>在所有物体生成完毕且静止后，场景随机器完成了它的任务，并且将捕获任务交转给相机随机器来完成。</p>
+<p>&lt;图片：Inspector of Background randomizer&gt;</p>
+<p>​	2.2.4 Camera randomize</p>
+<p>​	在场景创建完毕后，程序进入到图片生成的环节。如上文所述，为了保证数据的多样性，相机需要从多个角度对目标物体拍摄，此外，用户通常对图片有特殊的需求，而满足这些需求的功能通常需要摄像机参与，我们引入相机随机器来完成这些任务。</p>
+<p>​	本项目中，所有目标物体都需要被包含在图片中，这意味着物体需要在相机镜头范围内，且大部分不被遮挡，同时，相机和物体的距离需要保持在一定范围内，否则过小的物体会极其难以被识别。</p>
+<p>​	场景中，目标物体被放置在一张桌面，或者是类似桌子的物体上，例如沙发，课桌，箱子等，因此所有目标物体都已经被集中在一定范围内，且高度相近。而随机化通常需要一个范围或者环绕目标，我们可以利用目标物体的位置特点来构造一个所有目标的中心，只需要计算出所有物体在X,Y,Z坐标上的最大值和最小值，就可以以此构造出一个包含所有物体的长方体，而这个长方体的中心就是所有目标物体的中心。随机化时，我们需要让相机正对中心进行拍摄，并控制相机与中心的距离在适当范围内，以保证相机有能力拍摄到所有物体。位置和角度确定后，相机的z轴旋转也可以适当随机化，用户可以通过调整Rotation_z参数来自行控制随机范围。</p>
+<p>​	此外，为了防止目标不在镜头范围内，或是大部分被其他物体遮挡，我们需要在相机位置和角度确定后进行一次检查。在目标物体上新添加一个StaticController脚本作为组件，该脚本旨在提供可以随时检查物体状态的方法，例如检查物体是否静止，是否处于某个相机的镜头范围内。检查静止的方法很简单，帧更新时，物体会自行调用Update方法，此时记录物体的位置并比对上一帧是否在同一位置，即可获得目标的运动状态；检查目标是否被遮挡则可以使用Raycast或者Linecast,从物体处向相机发射一段射线，如果检测射线到达相机前碰到了其他物体，则目标被遮挡。</p>
+<p>&lt;图片：长方体示例&gt;</p>
+<p>&lt;图片：Linecast示例&gt;</p>
+<p>​	Unity定义了相机的视口坐标，即物体相对摄像机的标准化坐标，每一个相机都拥有一个视锥，当物体处于该视锥内时，物体也会被包含在相机画面中，此时物体的视口坐标在0到1之间。换句话说，仅当物体相对摄像机的视口x,y坐标全部在0-1间时，物体中心一定在镜头内。通过这个特性，我们可以保证生成的图像内包含所有目标物体。</p>
+<p>&lt;图片：相机视锥/视口&gt;</p>
+<p>​	同样，我们需要在相机随机器中配置帧数范围来控制其在周期内的行为，此处为startAtFrame和captureFrames，分别控制随机器在哪一帧开始运作和连续运作多少帧。在背景随机完成后，相机随机器将控制调整相机到合适的位置和角度，进行图片捕获。</p>
+<p>&lt;图片：相机随机器Inspector&gt;</p>
+<p>2.3 相机与贴标机实现</p>
+<p>​	Unity中提供了相机组件，但普通相机无法满足本项目的所有需求，Perception包中提供了perception camera组件，提供了可以根据场景生成Segmentation image的功能。同时，在相机进行图像捕获时也会将指定的数据以文本的形式输出至JSON文件中。</p>
+<p>​	代码层面上，Perception相机连接着两个重要功能，前一个是连接相机组件，并以该相机的视角为基础捕获特定分辨率的图片。另外一个功能则是管理各个Labeler，并且在拍摄图片时让Labeler进行各自的数据输出工作，其中包括了获取画面中的物体信息，以及让一般Labeler根据各自的任务和LabelConfig将信息输出至JSON文件中，这里会涉及到SensorHandle类来对数据进行格式化输出，开发者也可以根据特定需求，基于SensorHandle类来输出其他信息。除了文本信息外，Semantic Segmentation Labeler会读取对应Labeler Config中物体对应的颜色对图片中的场景物体重新渲染，并且输出Semantic Segmentation images到指定路径中，类似的还有BoundingBoxLabeler，会根据每帧捕获的场景进行GUI绘制，在各个贴有标签的物体上绘制Bounding Box,以获得类似Object Detection结果的图像。</p>
+<p>&lt;图片：segmentation image示例&gt;</p>
+<p>&lt;图片：BoundingBox2D示例&gt;</p>
+<p>向JSON文件中输出信息时，会根据数据类型将数据分为metric和annotation, 并在单独的文件中给各个类型的数据分配特定的ID。最后以图片或帧为单位，依次输出各种信息，后续则可以通过Python脚本对文件数据进行批处理，从而应用至机器学习的模型训练中。</p>
+<p>在深度相机的实现上，我们将它作为附带的组件添加至相机对象上。深度相机同样利用Unity自带的相机，修改渲染材质并使用CaptureDepthToFile方法生成特定格式的深度图像。由于EXR格式可以储存多个通道的数据，且每个通道的数据精细度都有保证，支持16位浮点数，32位浮点数和32位整数的pixel size，对应该格式，本项目中使用R32G32B32A32_S Float的渲染模式，即总计128位，每个通道占32位的浮点数格式。</p>
+<p>2.4 测试</p>
+<p>​	本段中，我们将测试Unity生成的数据集的正确性，即各种数据是否符合实际拍摄时的场景，例如RGB图片，深度图片以及标签数据是否相互匹配。程序会在多种场景内进行测试，且根据实际结果进行相应报告。</p>
+<pre><code>我们将在一个办公室主题的背景中生成大量复杂场景，生成物体包括10种桌面形物体，30种大型物件与30种小型物件，而桌面上随机生成的物体数量限制在6种以下(以免将目标物体挤压至桌面外)，同时遵循第二节所述的所有随机化细节，进行约3000张图片数据的生成，以此检测程序在复杂场景中是否能完成任务，同时得到关于运行时间，性能要求的信息。
+</code></pre>
+<p>​	由于所有标签信息都是由程序生成的，在代码正常运行的情况下一般不会有错误的标签数据，以防万一，我们对各类标签信息都进行双重验证。对于肉眼可以分辨的标签信息，我们将生成的图片进行处理与对比，例如语义图片，我们可以直接检查图中是否有未着色的物体，对于深度图像，根据距离范围对图像灰度进行标准化处理后和RGB图片比对即可验证其正确性。</p>
+<p>​	相反，对于人工难以轻易判断的信息，我们在程序运行时使用代码进行初步验证，即让程序实时汇报相关信息，再将该信息与贴标机输出的信息进行对比，来实现标签数据的检验。例如记录物体和相机位姿的标签数据, 我们让相机在捕获时同时获取同类信息进行输出，再与JSON文件中的数据对比即可。</p>
+<p>&lt;图片：Intrinsic matrix和相机其他信息，Debug.Log and JSON files&gt;</p>
+<p>​	作为二步验证，需要添加新的Labeler用来输出每一帧里目标物体和相机的位置和旋转，以及相机的本质矩阵、目标物体的Boundingbox。在Unity本身拥有物体模型的mesh组件时，通过上述数据，可以计算出相机坐标系中物体的位置和旋转偏移，并且得出物体各个点经过相机投射到RGB图片上的坐标：</p>
+<ol>
+<li>根据Bbox位置，在整个图片中截取一部分包含目标物体的小图片(由于生成图片是4k的，整体验证很耗时)</li>
+<li>调用物体模型的mesh数据，根据物体相对相机的旋转偏移求得模型上的关键点，或点云图。</li>
+<li>用相机的本质矩阵先后计算出keypoints和点云图在RGB图中的位置，并与实际图中物体比较。将投影空间中的点位置转换到相机的focal plane坐标通常使用以下公式：</li>
+</ol>
+<p>(公式：x = PX,P = in_mat · Rt)</p>
+<p>&lt;Bounding Box图&gt;</p>
+<p>&lt;图片：Duck点云图&gt;</p>
+<p>​	本次测试中，程序花费了40分钟来生成3000张4K图片数据，其中CPU(Intel Core i7)占用率为30%，内存(16GB)占用率为23%，可说明本程序对硬件需求较低。</p>
+<p>Chapter 4</p>
+<p>Conclusion</p>
+<p>​	在位姿估计任务中， 我们遵循并使用平均距离 ADD 和 ADD-S 指标评估深度学习的训练结果，平均距离 ADD 计算由预测的 6D 姿势变换的对象点和实际6D位姿的对象点之间的平均距离，ADD-S 度量是为对称对象设计的，平均距离是根据最近的点距离计算。通常，6D位姿任务中使用ADD(S)-AUC来对结果进行定量评估，ADD(-S)精度定义为计算的平均距离小于模型直径10%的样本所占百分比。</p>
+<p>​	同样使用PVN3D的神经网络进行6D位姿估计的训练，使用LineMOD数据集的Mean ADD(S) 精度值为95.1，使用YCB-Video数据集的Mean ADD-S矩阵值为95.5。</p>
+<p>​	本项目中，我们同样使用ADD和ADD-S来评估训练结果，在定量训练的过程中，深度学习的总体损失函数值如图所示，随训练步骤的增长而减少，并且在第90步左右达到稳定值，这意味着模型训练过程顺利地按照预期进行。</p>
+<p>​	从项目结果上，对单个目标物体进行位姿估计的任务中，得到的ADDS精确值如图所示，曲线在横轴为10%(模型直径)时几乎到达1.0，这意味着绝大多数预测结果和实际物体位置的距离误差在模型直径的10%之内，ADDS精确值在98以上。尽管没有针对大量目标物体的位姿估测结果，但对于单次测试而言，本数据集中的场景复杂度足够高，而运用PVN3D进行深度学习后得到的结果也有可观的准确度。证明了数据集的实用性。</p>
+<p>​	结论上，我们提供了一种利用Unity3D引擎，生成用于位姿估计的RGB-D数据集的方法，该方法具有高度的拓展性，用户可以通过更改程序中参数来调整数据集使其符合自身需求。同时也不需要使用深度相机，而是通过模拟直接生成数据，标签数据也会在程序运行过程中自行生成，省去了手动标签的时间。该方法对设备的硬件需求较低，生成数据的速度较快(大约每分钟75份RGB-D数据)。同样，我们展示了在测试训练中，使用PVN3D神经网络在该数据集得到了合理的准确度，这证明了该方法的正确性。本研究强调，Unity3D这样的物理游戏引擎有着巨大潜力，可以用于自动生成各类数据并且具有远超普遍方法的效率和可拓展性，能够为机器学习数据集生成的高效工具，并为基于AI的快速探索开辟了一条新的道路。</p>
+<hr>
+<p>Seminar 备忘</p>
+<p>konkrete Fehlervorfälle</p>
+<ol>
+<li>故事发生背景，即探路者号开发前后的时代背景(2-3min)</li>
+<li>探路者号的任务、配置，以及发生问题前的经历(4-5min)</li>
+<li>实际遇到的问题，问题发生的原因。以及发现问题后当时的应对方案。(5-6min)</li>
+<li>对bug引发的后果的评价，稍微发散到其他类似问题上举例说明问题严重性以及可预见性。并且对整个事件进行总结。(3-4min)</li>
+</ol>
+<p>1.Der Hintergrund der Geschichte, also der Hintergrund der Zeit vor und 	nach der Entwicklung von Pathfinder (2-3min)</p>
+<ol start="2">
+<li>Pathfinder-Mission, Konfiguration und Erfahrung vor dem Problem (4-5 Min.)</li>
+<li>Die tatsächlich aufgetretenen Probleme und die Gründe für die Probleme. und was zu tun ist, wenn das Problem entdeckt wird. (5-6 Minuten)</li>
+<li>Bewerte die Folgen von Fehlern und gebe Beispiele für die Schwere und Vorhersehbarkeit der Fehler aus anderen ähnlichen Problemen. Und fasse das ganze Ereignis zusammen. (3-4 Minuten)</li>
+</ol>
+<hr>
+<p>Reeves帖子记录</p>
+<p>The simplified view of the Mars Pathfinder hardware architecture looks like this. A single CPU controls the spacecraft. It resides on a VME bus which also contains interface cards for the radio, the camera, and an interface to a 1553 bus. The 1553 bus connects to two places : The &ldquo;cruise stage&rdquo; part of the spacecraft and the &ldquo;lander&rdquo; part of the spacecraft. The hardware on the cruise part of the spacecraft controls thrusters, valves, a sun sensor, and a star scanner. The hardware on the lander part provides an interface to accelerometers, a radar altimeter, and an instrument for meteorological science known as the ASI/MET. The hardware which we used to interface to the 1553 bus (at both ends) was inherited from the Cassini spacecraft. This hardware came with a specific paradigm for its usage : the software will schedule activity at an 8 Hz rate. This <strong>feature</strong> dictated the architecture of the software which controls both the 1553 bus and the devices attached to it.</p>
+
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="http://makichan520.github.io/post/rpg-maker-%E9%9A%8F%E8%AE%B0/">
+			下回<br>
+                </a>
+                
+                
+                
+                <a class="older-posts" href="http://makichan520.github.io/post/%E5%9F%BA%E4%BA%8Eperception%E5%8C%85%E5%88%9B%E5%BB%BArgbd%E6%95%B0%E6%8D%AE%E9%9B%86%E6%AF%95%E8%AE%BE%E6%8B%BE%E9%81%97/">
+			上回<br>
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 Darjee&#39;s Blog
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="http://makichan520.github.io//js/journal.js"></script>
+    </body>
+</html>
