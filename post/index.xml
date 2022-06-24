@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Darjee&#39;s Blog</title>
-    <link>http://makichan520.github.io/post/</link>
+    <link>https://makichan520.github.io/post/</link>
     <description>Recent content in Posts on Darjee&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate><atom:link href="http://makichan520.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate><atom:link href="https://makichan520.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习Markdown语法</title>
-      <link>http://makichan520.github.io/post/markdown/</link>
+      <link>https://makichan520.github.io/post/markdown/</link>
       <pubDate>Sun, 04 Apr 2021 01:29:42 +0900</pubDate>
       
-      <guid>http://makichan520.github.io/post/markdown/</guid>
+      <guid>https://makichan520.github.io/post/markdown/</guid>
       <description>从零开始学习Markdown 要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？) 为了各位看官老爷的良好体验，建议直接观看代码块部分
 标题 1.使用#号＋空格来表示标题(Header)，#的数量代表标题级数&amp;lt;和html类似&amp;gt;。 标准md格式下有h1~h6六种大小的标题，其中一级标题最大。
 2.另一种的方式是使用两种下划线 === 和 &amp;mdash; 来进行文字大小的控制，值得一提的是该方式只能标识一级标题与二级标题：
@@ -36,20 +36,20 @@ Markdown格式下的链接插入：
     
     <item>
       <title></title>
-      <link>http://makichan520.github.io/post/readme/</link>
+      <link>https://makichan520.github.io/post/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://makichan520.github.io/post/readme/</guid>
+      <guid>https://makichan520.github.io/post/readme/</guid>
       <description>Guide for generating RGB-D dataset with Unity ​	The purpose of this guide is to briefly explain how to automate the generation of RGBD datasets using this Unity program. Since this project makes extensive use of the Perception package, users can refer to the README in the Perception to work with it.
 If you just want to do data generation, you can refer to the easy tutorial in the perception package first, and then follow the guidelines in section Ⅰ to proceed.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://makichan520.github.io/post/rgbd_dataset/</link>
+      <link>https://makichan520.github.io/post/rgbd_dataset/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://makichan520.github.io/post/rgbd_dataset/</guid>
+      <guid>https://makichan520.github.io/post/rgbd_dataset/</guid>
       <description>为了验证exr文件是否正常运作，编写了一个用于合并图片的Python脚本，该脚本需求openexr库。
 我们使用anaconda来安装该库。
 conda install -c conda-forge openexr
@@ -58,10 +58,10 @@ conda install -c conda-forge openexr
     
     <item>
       <title></title>
-      <link>http://makichan520.github.io/post/rpg-maker-%E9%9A%8F%E8%AE%B0/</link>
+      <link>https://makichan520.github.io/post/rpg-maker-%E9%9A%8F%E8%AE%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://makichan520.github.io/post/rpg-maker-%E9%9A%8F%E8%AE%B0/</guid>
+      <guid>https://makichan520.github.io/post/rpg-maker-%E9%9A%8F%E8%AE%B0/</guid>
       <description>Yep插件相关 小雾文字颜色：\C[5]
 地图提示颜色：6
 物品品质颜色：2(橙色) 1(蓝色) 3 (绿) 31 (紫) 18(红色)
@@ -116,10 +116,10 @@ TODO LIST：
     
     <item>
       <title></title>
-      <link>http://makichan520.github.io/post/untitled/</link>
+      <link>https://makichan520.github.io/post/untitled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://makichan520.github.io/post/untitled/</guid>
+      <guid>https://makichan520.github.io/post/untitled/</guid>
       <description>Abstract(introduce the task or motivation of thesis)
 Chapter 1
 Introduction:
@@ -145,10 +145,10 @@ Introduction:
     
     <item>
       <title></title>
-      <link>http://makichan520.github.io/post/%E5%9F%BA%E4%BA%8Eperception%E5%8C%85%E5%88%9B%E5%BB%BArgbd%E6%95%B0%E6%8D%AE%E9%9B%86%E6%AF%95%E8%AE%BE%E6%8B%BE%E9%81%97/</link>
+      <link>https://makichan520.github.io/post/%E5%9F%BA%E4%BA%8Eperception%E5%8C%85%E5%88%9B%E5%BB%BArgbd%E6%95%B0%E6%8D%AE%E9%9B%86%E6%AF%95%E8%AE%BE%E6%8B%BE%E9%81%97/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://makichan520.github.io/post/%E5%9F%BA%E4%BA%8Eperception%E5%8C%85%E5%88%9B%E5%BB%BArgbd%E6%95%B0%E6%8D%AE%E9%9B%86%E6%AF%95%E8%AE%BE%E6%8B%BE%E9%81%97/</guid>
+      <guid>https://makichan520.github.io/post/%E5%9F%BA%E4%BA%8Eperception%E5%8C%85%E5%88%9B%E5%BB%BArgbd%E6%95%B0%E6%8D%AE%E9%9B%86%E6%AF%95%E8%AE%BE%E6%8B%BE%E9%81%97/</guid>
       <description>Unity基于Perception包创建RGBD数据集——毕设拾遗 · 前言 ​	历经假期2个月，终于找到了缺人而且愿意招本科生的本校毕设题目（说是毕设其实是毕业论文）。给老板干活闲暇之余以此博客记录一下毕设始末以及踩的各种坑。
 ​	毕设题目是使用Unity来生成RGBD图片以及数据，该数据集会用于实验室里机械臂的深度学习项目中。因为生成数据涉及Unity、C#、计算机视觉(摄像机原理)等知识，而这其中我没有一项是会的，所以是边学边做的状态下进行的毕设，看官们大概都比我强不少，不过至少可以作为Unity的Perception包指南来略作参考，我也会通过一个完全初学者的视角来展示开发过程。
 ​	Perception包可以生成用于计算机视觉相关训练和验证的大型数据集，该包基于C#实现，在Unity上运行。具有自定义随机场景，调整相机设置，生成图片以及相关数据等功能，可以提供符合机器学习任务要求的数据集。
@@ -171,10 +171,10 @@ Introduction:
     
     <item>
       <title></title>
-      <link>http://makichan520.github.io/post/%E5%B0%8F%E7%B3%B8lp/</link>
+      <link>https://makichan520.github.io/post/%E5%B0%8F%E7%B3%B8lp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://makichan520.github.io/post/%E5%B0%8F%E7%B3%B8lp/</guid>
+      <guid>https://makichan520.github.io/post/%E5%B0%8F%E7%B3%B8lp/</guid>
       <description>1、墨子糸に泣く
 大多小时候的事情都已经记不清了
 是的，正因为福丸同学在家中也有认真学习

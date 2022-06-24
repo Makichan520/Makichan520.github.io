@@ -1,23 +1,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Darjee&#39;s Blog</title>
-    <link>http://makichan520.github.io/</link>
+    <link>https://makichan520.github.io/</link>
     <description>Recent content on Darjee&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Apr 2021 01:29:42 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jun 2022 16:27:03 +0200</lastBuildDate>
     
-        <atom:link href="http://makichan520.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://makichan520.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>Unity RGB D数据集生成指北</title>
-        <link>http://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/</link>
+        <link>https://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/</link>
         <pubDate>Fri, 24 Jun 2022 16:27:03 +0200</pubDate>
         
-        <guid>http://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/</guid>
-        <description>Darjee&#39;s Blog http://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/ -&lt;h1 id=&#34;unity基于perception包创建rgbd数据集毕设拾遗&#34;&gt;Unity基于Perception包创建RGBD数据集——毕设拾遗&lt;/h1&gt;
+        <guid>https://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/</guid>
+        <description>Darjee&#39;s Blog https://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/ -&lt;h1 id=&#34;unity基于perception包创建rgbd数据集毕设拾遗&#34;&gt;Unity基于Perception包创建RGBD数据集——毕设拾遗&lt;/h1&gt;
 &lt;h3 id=&#34;-前言&#34;&gt;· 前言&lt;/h3&gt;
 &lt;p&gt;​	历经假期2个月，终于找到了缺人而且愿意招本科生的本校毕设题目（说是毕设其实是毕业论文）。给老板干活闲暇之余以此博客记录一下毕设始末以及踩的各种坑。&lt;/p&gt;
 &lt;p&gt;​	毕设题目是使用Unity来生成RGBD图片以及数据，该数据集会用于实验室里机械臂的深度学习项目中。因为生成数据涉及Unity、C#、计算机视觉(摄像机原理)等知识，而这其中我没有一项是会的，所以是边学边做的状态下进行的毕设，看官们大概都比我强不少，不过至少可以作为Unity的Perception包指南来略作参考，我也会通过一个完全初学者的视角来展示开发过程。&lt;/p&gt;
@@ -72,18 +72,18 @@
 &lt;p&gt;对于BackgroundObjectPlacementRandomizer来说，它会生成多层背景，你可以设置背景生成位置，层数以及组成背景的物品列表，物品之间的最小间隔。该随机器会随机调用列表中的物品，在生成范围内随机摆放物体。(部分随机器不需要Randomizer Tag，可以直接将游戏对象以参数的形式输入至随机器)&lt;/p&gt;
 &lt;p&gt;配置好我们需要的随机器后，可以通过运行游戏来测试一下随机器的运行状况。如果在之前已经设置好了Perception Camera和对应的ID Config，你可以在游戏运行中查看Labler标识出的信息(物体颜色，物体数量，所占屏幕大小等等)。而捕获的RGB图片以及其他数据也会输出到某个地方可供查看。打开Perception Camera的检视器，点开下方的Latest output folder, 即可检查输出的数据集。&lt;/p&gt;
 &lt;hr&gt;
-- http://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/ - </description>
+- https://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/ - </description>
         </item>
     
     
     
         <item>
         <title>学习Markdown语法</title>
-        <link>http://makichan520.github.io/post/markdown/</link>
+        <link>https://makichan520.github.io/post/markdown/</link>
         <pubDate>Sun, 04 Apr 2021 01:29:42 +0900</pubDate>
         
-        <guid>http://makichan520.github.io/post/markdown/</guid>
-        <description>Darjee&#39;s Blog http://makichan520.github.io/post/markdown/ -&lt;h2 id=&#34;从零开始学习markdown&#34;&gt;从零开始学习Markdown&lt;/h2&gt;
+        <guid>https://makichan520.github.io/post/markdown/</guid>
+        <description>Darjee&#39;s Blog https://makichan520.github.io/post/markdown/ -&lt;h2 id=&#34;从零开始学习markdown&#34;&gt;从零开始学习Markdown&lt;/h2&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;要说原因的话，只是写git项目总要写写readme文档，听说这个写作也很方便，以后写作也用这个挺好(还没感受到有什么地方很方便为啥我不用word？) &lt;!-- raw HTML omitted --&gt;
 &lt;strong&gt;为了各位看官老爷的良好体验，建议直接观看代码块部分&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;标题&#34;&gt;标题&lt;/h4&gt;
@@ -218,7 +218,7 @@ _   下划线
 
 &amp;lt;font color=green face=&amp;quot;微软雅黑&amp;quot; size=6&amp;gt;绿色 微软雅黑 字号6  &amp;lt;/font&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;后续可能会补充吧毕竟学习使用中用多少写多少&#34;&gt;后续可能会补充吧，毕竟学习使用中，用多少写多少&lt;/h3&gt;
-- http://makichan520.github.io/post/markdown/ - </description>
+- https://makichan520.github.io/post/markdown/ - </description>
         </item>
     
     

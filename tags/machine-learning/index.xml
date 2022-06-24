@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine learning on Darjee&#39;s Blog</title>
+    <link>https://makichan520.github.io/tags/machine-learning/</link>
+    <description>Recent content in machine learning on Darjee&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jun 2022 16:27:03 +0200</lastBuildDate><atom:link href="https://makichan520.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity RGB D数据集生成指北</title>
+      <link>https://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/</link>
+      <pubDate>Fri, 24 Jun 2022 16:27:03 +0200</pubDate>
+      
+      <guid>https://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/</guid>
+      <description>Unity基于Perception包创建RGBD数据集——毕设拾遗 · 前言 ​	历经假期2个月，终于找到了缺人而且愿意招本科生的本校毕设题目（说是毕设其实是毕业论文）。给老板干活闲暇之余以此博客记录一下毕设始末以及踩的各种坑。
+​	毕设题目是使用Unity来生成RGBD图片以及数据，该数据集会用于实验室里机械臂的深度学习项目中。因为生成数据涉及Unity、C#、计算机视觉(摄像机原理)等知识，而这其中我没有一项是会的，所以是边学边做的状态下进行的毕设，看官们大概都比我强不少，不过至少可以作为Unity的Perception包指南来略作参考，我也会通过一个完全初学者的视角来展示开发过程。
+​	Perception包可以生成用于计算机视觉相关训练和验证的大型数据集，该包基于C#实现，在Unity上运行。具有自定义随机场景，调整相机设置，生成图片以及相关数据等功能，可以提供符合机器学习任务要求的数据集。
+· 事前准备 ​	Unity 安装
+​	C#开发环境配置（以及和Unity的绑定设置）
+​	创建URP或HDRP项目，在项目中导入Perception包
+​	【Github项目地址】
+在Unity界面中，Window -&amp;gt; Package Manager 调出拓展包管理窗口，点击Add package from git URL并输入 com.unity.perception 即可。也可以通过输入特定版本的URL来安装特定版本的拓展包。
+ · 使用范例 ​	有英文基础的可以直接查看Perception包的github页面，上面有基本的教程范例。本节我会以其为基础来展示创建简单数据集的步骤范例。
+  创建Scene
+在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要随机化的GameObject也需要你先放入Scene中(例如Direction Light)，当然也可以在之后设置Randomizer时再行设置。
+  配置Perception Camera
+新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera
+  ​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关数据。
+​	Description即该摄像机的概述，一般为摄像机名
+​	Show Labeler Visualization 勾选后会在UI界面实时显示Labeler标识的信息
+​	Save Camera Rgb output to 勾选后会将捕获的图片以文件输出到磁盘中(路径为下面的Lastet Output Folder)
+​	Capture Trigger Mode 为摄像机捕获模式的设定，Schedule会让相机周期性地捕获图片，Manual则需要在其他脚本内写入RequestCapture()函数来手动捕获图片</description>
+    </item>
+    
+  </channel>
+</rss>
