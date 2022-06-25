@@ -23,18 +23,18 @@
 · 事前准备 ​	Unity 安装
 ​	C#开发环境配置（以及和Unity的绑定设置）
 ​	创建URP或HDRP项目，在项目中导入Perception包
-​	【Github项目地址】
+​	Perception项目地址
+​ 个人RGB-D数据集生成项目
 在Unity界面中，Window -&gt; Package Manager 调出拓展包管理窗口，点击Add package from git URL并输入 com.unity.perception 即可。也可以通过输入特定版本的URL来安装特定版本的拓展包。
  · 使用范例 ​	有英文基础的可以直接查看Perception包的github页面，上面有基本的教程范例。本节我会以其为基础来展示创建简单数据集的步骤范例。
   创建Scene
-在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要随机化的GameObject也需要你先放入Scene中(例如Direction Light)，当然也可以在之后设置Randomizer时再行设置。
+在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要将位置和方向进行随机化的GameObject你也可以先放入Scene中(例如Direction Light)，这种对象是你确定场景中一定会出现的物体，它们不会被从无到有生成出来而是一直在场景中。
   配置Perception Camera
-新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera
-  ​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关数据。
+新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera（由Perception包提供）。
+  ​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关（标签）数据。
 ​	Description即该摄像机的概述，一般为摄像机名
-​	Show Labeler Visualization 勾选后会在UI界面实时显示Labeler标识的信息
-​	Save Camera Rgb output to 勾选后会将捕获的图片以文件输出到磁盘中(路径为下面的Lastet Output Folder)
-​	Capture Trigger Mode 为摄像机捕获模式的设定，Schedule会让相机周期性地捕获图片，Manual则需要在其他脚本内写入RequestCapture()函数来手动捕获图片" />
+​	Show Labeler Visualization 勾选后会在Unity运行时，UI界面实时显示Labeler标识的信息
+​	Save Camera Rgb output to 勾选后会将捕获的图片以文件输出到磁盘中(路径为下面的Lastet Output Folder)" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://makichan520.github.io/unity-rgb-d%E6%95%B0%E6%8D%AE%E9%9B%86%E7%94%9F%E6%88%90%E6%8C%87%E5%8C%97/" /><meta property="article:section" content="" />
 <meta property="article:published_time" content="2022-06-24T16:27:03&#43;02:00" />
@@ -53,18 +53,18 @@
 · 事前准备 ​	Unity 安装
 ​	C#开发环境配置（以及和Unity的绑定设置）
 ​	创建URP或HDRP项目，在项目中导入Perception包
-​	【Github项目地址】
+​	Perception项目地址
+​ 个人RGB-D数据集生成项目
 在Unity界面中，Window -&gt; Package Manager 调出拓展包管理窗口，点击Add package from git URL并输入 com.unity.perception 即可。也可以通过输入特定版本的URL来安装特定版本的拓展包。
  · 使用范例 ​	有英文基础的可以直接查看Perception包的github页面，上面有基本的教程范例。本节我会以其为基础来展示创建简单数据集的步骤范例。
   创建Scene
-在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要随机化的GameObject也需要你先放入Scene中(例如Direction Light)，当然也可以在之后设置Randomizer时再行设置。
+在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要将位置和方向进行随机化的GameObject你也可以先放入Scene中(例如Direction Light)，这种对象是你确定场景中一定会出现的物体，它们不会被从无到有生成出来而是一直在场景中。
   配置Perception Camera
-新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera
-  ​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关数据。
+新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera（由Perception包提供）。
+  ​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关（标签）数据。
 ​	Description即该摄像机的概述，一般为摄像机名
-​	Show Labeler Visualization 勾选后会在UI界面实时显示Labeler标识的信息
-​	Save Camera Rgb output to 勾选后会将捕获的图片以文件输出到磁盘中(路径为下面的Lastet Output Folder)
-​	Capture Trigger Mode 为摄像机捕获模式的设定，Schedule会让相机周期性地捕获图片，Manual则需要在其他脚本内写入RequestCapture()函数来手动捕获图片"/>
+​	Show Labeler Visualization 勾选后会在Unity运行时，UI界面实时显示Labeler标识的信息
+​	Save Camera Rgb output to 勾选后会将捕获的图片以文件输出到磁盘中(路径为下面的Lastet Output Folder)"/>
 
 
 
@@ -281,6 +281,24 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 					
 				
 			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#-%e7%a8%8b%e5%ba%8f%e8%ae%be%e8%ae%a1" onclick="onNavClick(`#-程序设计-nav`)" id="-程序设计-nav">
+									· 程序设计
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -424,6 +442,24 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 					
 				
 			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#-%e7%a8%8b%e5%ba%8f%e8%ae%be%e8%ae%a1" onclick="onNavClick(`#-程序设计-nav`)" id="-程序设计-nav">
+									· 程序设计
+								</a>
+							</li>
+						
+						
+					
+				
+			
 		</ul>
 	</div>
 
@@ -520,7 +556,8 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <p>​	Unity 安装</p>
 <p>​	C#开发环境配置（以及和Unity的绑定设置）</p>
 <p>​	创建URP或HDRP项目，在项目中导入Perception包</p>
-<p>​	<a href="https://github.com/Unity-Technologies/com.unity.perception">【Github项目地址】</a></p>
+<p>​	<a href="https://github.com/Unity-Technologies/com.unity.perception">Perception项目地址</a></p>
+<p>​    <a href="https://github.com/Makichan520/RGBD_unity">个人RGB-D数据集生成项目</a></p>
 <p>在Unity界面中，<strong>Window -&gt; Package Manager</strong> 调出拓展包管理窗口，点击<strong>Add package from git URL</strong>并输入 <strong>com.unity.perception</strong> 即可。也可以通过输入特定版本的URL来安装特定版本的拓展包。</p>
 <hr>
 <h3 id="-使用范例">· 使用范例</h3>
@@ -528,44 +565,106 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <ol>
 <li>
 <p>创建Scene</p>
-<p>在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要随机化的GameObject也需要你先放入Scene中(例如Direction Light)，当然也可以在之后设置Randomizer时再行设置。</p>
+<p>在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要将位置和方向进行随机化的GameObject你也可以先放入Scene中(例如Direction Light)，这种对象是你确定场景中一定会出现的物体，它们不会被从无到有生成出来而是一直在场景中。</p>
 </li>
 <li>
 <p>配置Perception Camera</p>
-<p>新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera</p>
+<p>新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera（由Perception包提供）。</p>
 </li>
 </ol>
-<p><!-- raw HTML omitted --></p>
-<p>​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关数据。</p>
+<p><img src="https://s2.loli.net/2022/06/25/tiIFloHfWmNjPvh.png" alt="image-20220624184358410"></p>
+<p>​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关（标签）数据。</p>
 <p>​	<code>Description即该摄像机的概述，一般为摄像机名</code></p>
-<p>​	<code>Show Labeler Visualization 勾选后会在UI界面实时显示Labeler标识的信息</code></p>
+<p>​	<code>Show Labeler Visualization 勾选后会在Unity运行时，UI界面实时显示Labeler标识的信息</code></p>
 <p>​	<code>Save Camera Rgb output to 勾选后会将捕获的图片以文件输出到磁盘中(路径为下面的Lastet Output Folder)</code></p>
-<p>​	<code>Capture Trigger Mode 为摄像机捕获模式的设定，Schedule会让相机周期性地捕获图片，Manual则需要在其他脚本内写入RequestCapture()函数来手动捕获图片</code></p>
-<p>​	<code>Camera Labelers列表用于配置摄像机的数据生成，可以使用Perception包自带的Labeler或者自己按需求实现Labeler</code></p>
+<p>​	<code>Capture Trigger Mode 为摄像机捕获模式的设定，Schedule会让相机周期性地捕获图片，Manual则需要在其他脚本内写入RequestCapture()函数控制该组件来手动捕获图片</code></p>
+<p>​	<code>Camera Labelers列表用于配置标签数据生成，可以使用Perception包自带的Labeler或者自己按需求实现Labeler</code></p>
 <p>​	Camera Labeler通常会依据Labeler Config进行对象检测与标记，并依据捕获时的状态生成相关数据。</p>
-<p>​                      <!-- raw HTML omitted --></p>
-<p>如图， BoundingBox2DLabeler会识别物体并且根据边界来为每一个对象绘制一个矩形边界，ObjectCountLabeler会计算每种物体在捕获画面中的数量，SemanticSegmentationLabeler会在视图的顶部显示叠加的Semantic分割图像，RenderedObjectInfoLabeler会生成保存渲染对象信息的json文件。而这些标签器的运行都依赖于Label Config。</p>
-<p>可以在Asset中新建ID Label Config(用于指定标签对应ID) 和 SemanticSegmentation Label Config(用于指定标签对应颜色)。再给想要标记的物体添加Labeling组件，添加上对应的ID即可。</p>
-<p><img src="https://gitee.com/Makichan520/pics/raw/master/Picgo+Gitee%E5%9B%BE%E5%BA%8A/image-20211209220906172.png" alt="image-20211209220906172"><img src="https://s2.loli.net/2022/06/24/7uh1nXa8TFbZI6j.png" alt="image-20211209220937407"></p>
-<p>在此可以通过添加文件夹或勾选Use Automatic Labeling来快速设置ID Label Config。(个人推荐一个个慢慢设置，同类型的物体都应该设置成一个标签)</p>
-<p>并且，同一个GameObject可以拥有复数标签，这也贴合我们对数据生成的要求。</p>
+<p>​</p>
+<p>如上图， <code>BoundingBox2DLabeler</code>会识别物体并且根据边界来为每一个对象绘制一个矩形边界；<code>ObjectCountLabeler</code>会计算每种物体在捕获画面中的数量；<code>SemanticSegmentationLabeler</code>会在视图的顶部显示叠加的Semantic分割图像，<code>RenderedObjectInfoLabeler</code>会生成保存渲染对象信息的json文件；最后的<code>InstrinsicMatrixLabeler</code>向json文件中输出相机的本质矩阵以及其他位置相关的数据。而这些贴标器的运行都依赖于<code>Label Config</code>。</p>
+<p>可以在Asset中新建<code>ID Label Config</code>(用于指定标签对应ID) 和 <code>SemanticSegmentation Label Config</code>(用于指定标签对应颜色)。再给想要标记的物体添加Labeling组件，添加上对应的ID即可。</p>
+<p><img src="https://s2.loli.net/2022/06/25/UIGlDvKQku1J2FM.png" alt="image-20220624185115144"><img src="https://s2.loli.net/2022/06/24/7uh1nXa8TFbZI6j.png" alt="image-20211209220937407"></p>
+<p>在此可以通过添加文件夹或勾选Use Automatic Labeling来快速设置<code>ID Label Config</code>。(个人推荐一个个慢慢设置，同类型的物体都应该设置成一个标签)</p>
+<p>并且，同一个<code>GameObject</code>可以拥有复数标签，这也贴合我们对数据生成的要求。</p>
 <p>3.配置Depth Camera</p>
-<p>为了生成RGBD图片，我们需要一个深度摄像机来捕获深度图片，Perception包内并未提供深度摄像机，于是我们自己实现了一个用于生成深度图的脚本。这个脚本的代码参考了Perception camera本身(因为需要和这个摄像机同步捕获图片，以生成RGBD图像)。</p>
-<p>建议将Depth Camera和Perception Camera总是设为同一位置(可以设置为子对象，或将两个组件绑定在同一Camera对象上)，Depth Camera 参数设置如下：</p>
-<p><img src="https://gitee.com/Makichan520/pics/raw/master/Picgo+Gitee%E5%9B%BE%E5%BA%8A/QQ%E5%9B%BE%E7%89%8720211211172002.png" alt="image-20211211171827530"></p>
+<p>为了生成RGBD图片，我们需要一个深度摄像机来捕获深度图片，Perception包内并未提供深度摄像机，于是我们自己实现了一个用于生成深度图的脚本(具体代码参考RGBD_unity项目)。这个脚本的代码参考了<code>Perception camera</code>本身(因为需要和这个摄像机同步捕获图片，以生成RGBD图像)。</p>
+<p>建议将<code>Depth Camera</code>和<code>Perception Camera</code>总是设为同一位置（因为需要将RGB图片和深度图对应起来生成RGB-D图像），可以设置为子对象，或将两个组件绑定在同一<code>Camera</code>对象上，<code>Depth Camera </code>参数设置如下：</p>
+<p><img src="https://s2.loli.net/2022/06/25/BILPsc1fJKUQVbi.png" alt="QQ图片20220624182918"></p>
 <p>和perception camera类似，可以调整捕获模式(自动/手动)，仅在自动模式下，捕获间隔会启用，并且每隔一定秒自动捕获深度图。Camera选择需要作为深度摄像机的Camera，图片格式我选择的是Exr（方便使用Python脚本和RGB图合并），深度格式选择的是R32G32B32A32_S Float (也可以选择符合你需求的格式)。</p>
-<p>同理，当使用Manual模式进行捕获时，需要手动调用DepthCamera.RequestCapture()来进行捕获。</p>
+<p>同理，当使用Manual模式进行捕获时，需要手动调用<code>DepthCamera.RequestCapture()</code>来进行捕获。</p>
 <p>4.配置随机化</p>
-<p>正如前文所述，我们需要设置场景的随机化，以便生成符合要求的数据集。有关这个任务的主要模块是Scenario和Randomizer。</p>
-<p>我们先在Scene中右键添加一个新游戏对象 <code>Create Empty</code>, 命名为 Scenario， 在对象中添加组件Perception -&gt; Scenarios -&gt;Fixed Length Scenario, 这是perception包自带的定长方案，该Scenario会让场景进行固定数量的随机化，并且可以调整每次随机化之间的间隔(帧)。</p>
-<p><img src="https://gitee.com/Makichan520/pics/raw/master/Picgo+Gitee%E5%9B%BE%E5%BA%8A/image-20211211143702452.png" alt="image-20211211143702452"></p>
-<p>如图，该Scenario总共进行20次随机化，每次间隔300帧，执行迭代的Unity模拟线程的数目为1，(线程)索引从0开始。&lt;关于Instance的说明我并没有测试，按照说明是指Unity worker instance的数目和索引&gt;</p>
-<p>之后就可以开始添加随机器了。所谓随机器，就是会在Scenario每一次迭代中对相应目标进行随机化的组件，perception包已经实现了不少随机器，我们先以Background Object Placement Randomizer 和 Sun Angle Randomizer 为例，大致展现一下运行模式。</p>
+<p>正如前文所述，我们需要设置场景的随机化，以便生成符合要求的数据集。有关这个任务的主要模块是<code>Scenario</code>和<code>Randomizer</code>。</p>
+<p>我们先在Scene中右键选择<code>create empty</code>添加一个空游戏对象 , 命名为 Scenario， 在对象中添加组件Perception -&gt; Scenarios -&gt;Fixed Length Scenario, 这是perception包自带的定长方案，该Scenario会让场景进行固定数量的随机化，并且可以调整每次随机化之间的间隔(帧)。</p>
+<p><img src="https://s2.loli.net/2022/06/25/HB5CtirYXpqMzAS.png" alt="QQ图片20220625012843"></p>
+<p>如图，该Scenario总共进行20次随机化，每次间隔300帧，执行迭代的Unity模拟线程的数目为1，(线程)索引从0开始。&lt;关于Instance是似乎是在Unity Simulation中使用的，Perception包中有具体说明。我没有测试过所以不做过多说明，保留为1与0即可&gt;</p>
+<p>之后就可以开始添加随机器了。所谓随机器，就是会在Scenario每一次迭代中对相应目标进行随机化的组件，perception包已经实现了不少随机器，每一个随机器都负责一类随机，我们先以Background Object Placement Randomizer 和 Sun Angle Randomizer 为例，大致展现一下运行模式。</p>
 <p>在Scenario下方的Randomizer栏中点击Add Randomizer即可添加随机器，我们先添加上述的两个随机器，可以发现其中有各种可以设置的参数。</p>
-<p>对于SunAngleRandomizer而言，它可以将拥有SunAngleRandomizer Tag组件的游戏目标(在此情况下是Direction Light)进行随机化，通过设置时间，日期以及纬度的随机范围，可以模拟出各种情况下的太阳光。(有许多随机器需要Randomizer Tag来标识需要随机化的物体)</p>
+<p>对于SunAngleRandomizer而言，它可以将拥有SunAngleRandomizer Tag组件的游戏目标(在此情况下是Direction Light)进行随机化，通过设置时间，日期以及纬度的随机范围，可以模拟出各种情况下的太阳光。随机器通常需要对应的Randomizer Tag来标识需要随机化的物体。</p>
 <p>对于BackgroundObjectPlacementRandomizer来说，它会生成多层背景，你可以设置背景生成位置，层数以及组成背景的物品列表，物品之间的最小间隔。该随机器会随机调用列表中的物品，在生成范围内随机摆放物体。(部分随机器不需要Randomizer Tag，可以直接将游戏对象以参数的形式输入至随机器)</p>
-<p>配置好我们需要的随机器后，可以通过运行游戏来测试一下随机器的运行状况。如果在之前已经设置好了Perception Camera和对应的ID Config，你可以在游戏运行中查看Labler标识出的信息(物体颜色，物体数量，所占屏幕大小等等)。而捕获的RGB图片以及其他数据也会输出到某个地方可供查看。打开Perception Camera的检视器，点开下方的Latest output folder, 即可检查输出的数据集。</p>
+<p>配置好我们需要的随机器后，可以运行游戏来测试一下随机器的运行状况。如果在之前已经设置好了Perception Camera和对应的ID Config，你可以在游戏运行中查看Labler标识出的信息(物体颜色，物体数量，所占屏幕大小等等)。而捕获的RGB图片以及其他数据也会输出到某个地方可供查看。打开Perception Camera的检视器，点开下方的Latest output folder, 即可检查输出的数据集。</p>
 <hr>
+<h3 id="-程序设计">· 程序设计</h3>
+<p>​	下面来简述利用Perception包生成毕设项目需求的RGB-D数据集的过程。在此不介绍具体代码实现，只对实现思路进行简述。</p>
+<p>​	首先，该项目的目标任务是6D位姿估计，即利用深度学习，识别特定物体在图片中的位置以及旋转状态的任务。由于普通RGB图片缺乏纵向的3D信息，深度图成为了负载3D信息的不二之选。该项目旨在随机生成包含特定物体的场景，并对该场景进行RGB-D图片和对应标签数据的获取。</p>
+<p>​	总体而言，RGB-D数据集的生成只需要将上述使用范例的随机化部分与标签数据输出部分进行自定义即可解决。在配置具体的生成环境前，先创建一个普通的<code>Scene</code>并在其中添加一个固定的场景(不需要进行随机化的空间)，往后生成的物体会被限制在该空间内(无限制地生成会导致所需资源过多)</p>
+<p>​	<img src="https://s2.loli.net/2022/06/26/bEXZgKzx4DQBtwu.png" alt="QQ图片20220625191104"></p>
+<p>(类似于上图的房间)</p>
+<p>​	选用<code>Fixed length scenario</code>,该项目需要在单个循环中进行一次场景生成，一次循环中，我们先生成一个随机的场景，在对场景进行多次拍摄（拍摄途中对相机位置和角度进行随机化），以此在短时间内生成大量RGB-D图片。</p>
+<p>​	最重要的是设计一个生成背景物体的<code>Background Randomizer</code>，可以参考Perception包中自带的背景随机器（尽管它只纵向生成数面类似墙体的背景）。但它仍然提供了几种通过<code>Sampler</code>类来生成物体的方式。</p>
+<p>​	程序实现场景生成的思路是：先在上下两层分别生成小型物体和大型物体（为了让如冰箱、桌面的物体不会因为碰撞到下面的小物体发生翻转）。将物体的弹性系数设置为0，以保证物体掉落后快速进入静止。生成物体时用<code>PoissonDiskSampling</code>进行位置随机化，用<code>UniformSampler</code>进行旋转的随机化。下面是生成小型物体的示例代码。</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">for</span> (<span style="color:#00688b;font-weight:bold">var</span> i = <span style="color:#b452cd">1</span>; i &lt; layerCount; i++)
+                {
+                <span style="color:#228b22">// generate upper objects
+</span><span style="color:#228b22"></span>                    <span style="color:#00688b;font-weight:bold">var</span> seed = SamplerState.NextRandomState();
+                    <span style="color:#00688b;font-weight:bold">var</span> placementSamples = PoissonDiskSampling.GenerateSamples(
+                        placementArea.x, placementArea.y, separationDistance_upper, seed);
+                    <span style="color:#00688b;font-weight:bold">var</span> offset = <span style="color:#8b008b;font-weight:bold">new</span> Vector3(placementArea.x, <span style="color:#b452cd">0f</span>, placementArea.y) * -<span style="color:#b452cd">0.5f</span>;
+                    <span style="color:#8b008b;font-weight:bold">foreach</span> (<span style="color:#00688b;font-weight:bold">var</span> sample <span style="color:#8b008b;font-weight:bold">in</span> placementSamples)
+                    {
+                        <span style="color:#00688b;font-weight:bold">var</span> instance = m_GameObjectOneWayCache_2.GetOrInstantiate(prefabsUpper.Sample());
+                        instance.transform.position = <span style="color:#8b008b;font-weight:bold">new</span> Vector3(sample.x, separationDistance_upper * i + depth, sample.y) + offset;
+                        instance.transform.rotation = Quaternion.Euler(rotation.Sample());
+                        <span style="color:#00688b;font-weight:bold">var</span> rigid = instance.GetComponent&lt;Rigidbody&gt;();
+                        rigid.velocity = Vector3.zero;
+                        rigid.angularVelocity = Vector3.zero;
+                    }
+                    placementSamples.Dispose();
+
+                }
+</code></pre></div><p>​	物体静止后在场景的桌面物体中(桌面物体有独特标记，生成时被记入一个数组来保存指针)，随机选择一个，并在其上的随机位置生成目标物体。位姿估计任务中总有若干个目标物体，即需要明确识别其位置和旋转的物体。生成完成后等待其落到桌面并静止。</p>
+<p>​</p>
+<p>​	场景生成完毕后，使用<code>CameraRandomizer</code>对摄像机的位置进行随机化。</p>
+<p>​	本项目中，所有目标物体都需要被包含在图片中，且其大部分不被遮挡。我们分别完成这两种要求。</p>
+<ol>
+<li>计算出一个立方体来容纳所有目标物体，摄像机只需在合适的距离对该立方体的中心点进行拍摄，就大致可以得到包含所有物体的图片。同时我们使用Unity中相机的视口坐标(Viewport coordinate)来确认物体是否在相机范围内。</li>
+<li>使用射线检测(Raycast detection)，从目标物体中心向摄像机镜头发出射线，如果中间有阻挡，则物体大部分一定被遮盖。这只是一个大致的检测，但是对于形状较为规则的物体是合理的。</li>
+</ol>
+<p>​</p>
+<p>​	标签数据对于机器学习任务甚至比上述的RGB-D图片还要重要。我们在<code>Perception camera</code>组件中找到<code>camera labeler</code>选项，添加你需要的贴标器。注意：你可以参考已有的贴标器来实现自己需要的标签数据输出，但一定要在相关物体上打上<code>Labeling</code>的组件，并且设置对应的<code>Label config</code>。如果你只需要输出特定物体的数据，可以直接以组件的形式将Script放置到<code>Camera</code>中，并且仿照<code>Camera Labeler</code>,重载<code>Update()</code>函数并在<code>PerceptionCamera.SensorHandle</code>即将进行捕获时输出标签数据。</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#8b008b;font-weight:bold">public</span> <span style="color:#8b008b;font-weight:bold">void</span> Update()
+    {
+        <span style="color:#228b22">//Report using the PerceptionCamera&#39;s SensorHandle if scheduled this frame
+</span><span style="color:#228b22"></span>        <span style="color:#00688b;font-weight:bold">var</span> sensorHandle = GetComponent&lt;PerceptionCamera&gt;().SensorHandle;
+        <span style="color:#8b008b;font-weight:bold">if</span> (sensorHandle.ShouldCaptureThisFrame)
+        {
+            informations = <span style="color:#8b008b;font-weight:bold">new</span> TargetInformation[targets.Length];
+            <span style="color:#00688b;font-weight:bold">int</span> index = <span style="color:#b452cd">0</span>;
+            <span style="color:#8b008b;font-weight:bold">foreach</span>(<span style="color:#00688b;font-weight:bold">var</span> target <span style="color:#8b008b;font-weight:bold">in</span> targets){
+                Quaternion cam_rt = m_camera.transform.rotation;
+                Matrix4x4 n_rt = Matrix4x4.Rotate(Quaternion.Inverse(cam_rt)*target.transform.rotation);
+                informations[index++] = <span style="color:#8b008b;font-weight:bold">new</span> TargetInformation {name = target.name, position = target.transform.position,rotation = target.transform.rotation, relative_rt = n_rt};
+            }
+            sensorHandle.ReportAnnotationValues(
+                TargetAnnotationDefinition,
+                informations);
+        }
+    }
+</code></pre></div><p>​</p>
+<p>正常情况下，你的JSON文件输出应该是这样的：</p>
+<p><img src="https://s2.loli.net/2022/06/26/fpUTm8sobu5VvKX.png" alt="image-20220625215207391"></p>
+<p>检查你的RGB图像，深度图像，语义分割图像是否能一一对应，如果不行，可能是图片生成时的命名除了问题。</p>
+<hr>
+<p>暂时先写这么多，有什么需要的再加以补充…</p>
 
                     
                     <HR width="100%" id="EOF">

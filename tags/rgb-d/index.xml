@@ -19,18 +19,18 @@
 · 事前准备 ​	Unity 安装
 ​	C#开发环境配置（以及和Unity的绑定设置）
 ​	创建URP或HDRP项目，在项目中导入Perception包
-​	【Github项目地址】
+​	Perception项目地址
+​ 个人RGB-D数据集生成项目
 在Unity界面中，Window -&amp;gt; Package Manager 调出拓展包管理窗口，点击Add package from git URL并输入 com.unity.perception 即可。也可以通过输入特定版本的URL来安装特定版本的拓展包。
  · 使用范例 ​	有英文基础的可以直接查看Perception包的github页面，上面有基本的教程范例。本节我会以其为基础来展示创建简单数据集的步骤范例。
   创建Scene
-在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要随机化的GameObject也需要你先放入Scene中(例如Direction Light)，当然也可以在之后设置Randomizer时再行设置。
+在新项目中新建一个Scene，它会成为生成图片及数据的基础，你可以在该屏幕中首先布置好不需要随机化的场景(例如Plane，Terrain，Skybox等)。而一部分需要将位置和方向进行随机化的GameObject你也可以先放入Scene中(例如Direction Light)，这种对象是你确定场景中一定会出现的物体，它们不会被从无到有生成出来而是一直在场景中。
   配置Perception Camera
-新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera
-  ​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关数据。
+新建的Scene中会自带一个主摄像头，更名为Perception Camera之后我们将其作为感知摄像头使用，在上面添加组件Perception Camera（由Perception包提供）。
+  ​	· 感知摄像头是本项目最重要的组件之一，它负责在特定时间点捕获画面并且生成相关（标签）数据。
 ​	Description即该摄像机的概述，一般为摄像机名
-​	Show Labeler Visualization 勾选后会在UI界面实时显示Labeler标识的信息
-​	Save Camera Rgb output to 勾选后会将捕获的图片以文件输出到磁盘中(路径为下面的Lastet Output Folder)
-​	Capture Trigger Mode 为摄像机捕获模式的设定，Schedule会让相机周期性地捕获图片，Manual则需要在其他脚本内写入RequestCapture()函数来手动捕获图片</description>
+​	Show Labeler Visualization 勾选后会在Unity运行时，UI界面实时显示Labeler标识的信息
+​	Save Camera Rgb output to 勾选后会将捕获的图片以文件输出到磁盘中(路径为下面的Lastet Output Folder)</description>
     </item>
     
   </channel>
